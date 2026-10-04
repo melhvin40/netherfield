@@ -1,5 +1,7 @@
 name: Deploy to GitHub Pages
 
+# Builds the HTML pages from data/*.json and src/ (node tools/build.mjs, no dependencies) and
+# publishes the site. Runs on every push, including the commits made by the agency admin (admin.html).
 on:
   push:
     branches: ["claude/blissful-mccarthy-qyd7fh", "main"]
@@ -10,9 +12,10 @@ permissions:
   pages: write
   id-token: write
 
+# One deployment at a time; a newer push waits for the running one instead of cancelling it.
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -22,9 +25,12 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
+      - uses: actions/setup-node@v4
         with:
-          enablement: true
+          node-version: 22
+      - name: Build pages from data
+        run: node tools/build.mjs
+      - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .

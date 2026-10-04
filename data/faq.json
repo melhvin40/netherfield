@@ -1,0 +1,89 @@
+{
+  "_comment": "Golden Visa questions shown on golden-visa-benefits.html. General information only; reviewed against the 2024 rules. Edited in admin.html.",
+  "updated": "2026-10",
+  "categories": [
+    {
+      "id": "programme",
+      "label": "The programme"
+    },
+    {
+      "id": "investment",
+      "label": "Investment"
+    },
+    {
+      "id": "family",
+      "label": "Family & residency"
+    },
+    {
+      "id": "process",
+      "label": "Process & costs"
+    }
+  ],
+  "items": [
+    {
+      "cat": "programme",
+      "q": "What is the Greek Golden Visa?",
+      "a": "A five-year residence permit for non-EU nationals who invest in Greek real estate. It is renewable every five years for as long as you keep the property, and it gives visa-free travel within the Schengen Area for up to 90 days in any 180."
+    },
+    {
+      "cat": "programme",
+      "q": "Do I have to live in Greece to keep it?",
+      "a": "No. There is no minimum stay. You can spend as much or as little of the year in Greece as you like and the permit stays valid."
+    },
+    {
+      "cat": "programme",
+      "q": "Does the Golden Visa lead to EU citizenship?",
+      "a": "Not automatically. The permit grants long-term residence. Citizenship is a separate naturalisation process with its own requirements, including years of actual residence, language and civic knowledge."
+    },
+    {
+      "cat": "programme",
+      "q": "Can I work in Greece with a Golden Visa?",
+      "a": "The permit does not include the right to be employed in Greece, but you can invest, own companies, and act as a shareholder or board member."
+    },
+    {
+      "cat": "investment",
+      "q": "What is the minimum investment?",
+      "a": "Since 2024 it depends on the location: €800,000 in Attica (including Athens, Glyfada and Piraeus), Thessaloniki, Mykonos, Santorini and islands with more than 3,100 residents, and €400,000 everywhere else, in both cases for one residential property of at least 120 m². A €250,000 threshold applies anywhere in Greece to buildings converted from commercial to residential use and to restored listed buildings. Our advisors confirm which route applies to each Netherfield property before you reserve."
+    },
+    {
+      "cat": "investment",
+      "q": "Can I combine several properties to reach the threshold?",
+      "a": "For the €400,000 and €800,000 routes the investment has to be a single property of at least 120 m². Additional homes can of course be bought alongside it."
+    },
+    {
+      "cat": "investment",
+      "q": "Can I rent the property out?",
+      "a": "Yes, on long-term leases. Golden Visa properties may not be used for short-term holiday rentals such as Airbnb. Netherfield's rental team can find and manage long-term tenants for you."
+    },
+    {
+      "cat": "investment",
+      "q": "What return can I expect?",
+      "a": "Netherfield's portfolio has averaged a 6% gross annual rental yield. Returns vary by property, furnishing and lease, and are never guaranteed; we share the figures behind each estimate."
+    },
+    {
+      "cat": "family",
+      "q": "Who can be included in the application?",
+      "a": "Your spouse or registered partner, your children under 21, and the parents of both spouses, all under the one investment."
+    },
+    {
+      "cat": "family",
+      "q": "What happens when the permit is renewed?",
+      "a": "Every five years the permit is renewed for the whole family, as long as you still own the qualifying property."
+    },
+    {
+      "cat": "process",
+      "q": "How long does the process take?",
+      "a": "It depends on the property and the paperwork. Once due diligence is complete, buying usually takes a few weeks; the residence permit follows after your biometrics appointment, typically within several months. We give you a realistic timeline in your first consultation."
+    },
+    {
+      "cat": "process",
+      "q": "What costs come on top of the purchase price?",
+      "a": "Expect property transfer tax (3.09% on resale homes; new builds may be subject to VAT instead), notary, land registry and legal fees, and the permit application fees. Your advisor prepares a full cost breakdown before you commit."
+    },
+    {
+      "cat": "process",
+      "q": "Do I need to be in Greece to buy?",
+      "a": "Only briefly. With a power of attorney our legal partners can handle most steps for you; you visit once to give your biometrics for the permit."
+    }
+  ]
+}

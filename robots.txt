@@ -1,4 +1,3 @@
+# Preview build: the redesign concept is not meant to be indexed.
 User-agent: *
-Allow: /
-
-Sitemap: https://netherfieldevelopments.com/sitemap.xml
+Disallow: /

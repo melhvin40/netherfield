@@ -1,0 +1,644 @@
+{
+  "_comment": "Categories, property types, markets and the JamesEdition feature taxonomy. Edited in admin.html. 'group' is where a feature is listed on a property page (Lot / Interior / Outdoor, as on JamesEdition); 'filterGroup' is the section it sits in inside the All filters panel (View / Outdoor / Indoor / Lot, as on JamesEdition); 'searchable: false' features are listed on the property page but are not offered as a search filter (JamesEdition shows those as plain text instead of links).",
+  "featureGroups": [
+    {
+      "id": "lot",
+      "label": "Lot"
+    },
+    {
+      "id": "interior",
+      "label": "Interior"
+    },
+    {
+      "id": "outdoor",
+      "label": "Outdoor"
+    }
+  ],
+  "filterGroups": [
+    {
+      "id": "view",
+      "label": "View"
+    },
+    {
+      "id": "outdoor",
+      "label": "Outdoor features"
+    },
+    {
+      "id": "indoor",
+      "label": "Indoor features"
+    },
+    {
+      "id": "lot",
+      "label": "Lot features"
+    }
+  ],
+  "features": [
+    {
+      "id": "scenic-view",
+      "label": "Scenic view",
+      "group": "lot",
+      "filterGroup": "view",
+      "searchable": true,
+      "icon": "panorama"
+    },
+    {
+      "id": "sea-view",
+      "label": "Sea view",
+      "group": "lot",
+      "filterGroup": "view",
+      "searchable": true,
+      "icon": "wave"
+    },
+    {
+      "id": "water-view",
+      "label": "Water view",
+      "group": "lot",
+      "filterGroup": "view",
+      "searchable": true,
+      "icon": "wave"
+    },
+    {
+      "id": "ocean-view",
+      "label": "Ocean view",
+      "group": "lot",
+      "filterGroup": "view",
+      "searchable": true,
+      "icon": "wave"
+    },
+    {
+      "id": "city-view",
+      "label": "City view",
+      "group": "lot",
+      "filterGroup": "view",
+      "searchable": true,
+      "icon": "city"
+    },
+    {
+      "id": "mountain-view",
+      "label": "Mountain view",
+      "group": "lot",
+      "filterGroup": "view",
+      "searchable": true,
+      "icon": "mountain"
+    },
+    {
+      "id": "beachfront",
+      "label": "Beachfront",
+      "group": "lot",
+      "filterGroup": "lot",
+      "searchable": true,
+      "icon": "beach"
+    },
+    {
+      "id": "coastal",
+      "label": "Coastal",
+      "group": "lot",
+      "filterGroup": "lot",
+      "searchable": true,
+      "icon": "wave"
+    },
+    {
+      "id": "waterfront",
+      "label": "Waterfront",
+      "group": "lot",
+      "filterGroup": "lot",
+      "searchable": true,
+      "icon": "wave"
+    },
+    {
+      "id": "seafront",
+      "label": "Seafront",
+      "group": "lot",
+      "filterGroup": "lot",
+      "searchable": true,
+      "icon": "wave"
+    },
+    {
+      "id": "oceanfront",
+      "label": "Oceanfront",
+      "group": "lot",
+      "filterGroup": "lot",
+      "searchable": true,
+      "icon": "wave"
+    },
+    {
+      "id": "privacy",
+      "label": "Privacy",
+      "group": "lot",
+      "filterGroup": "lot",
+      "searchable": true,
+      "icon": "shield"
+    },
+    {
+      "id": "new-built",
+      "label": "New built",
+      "group": "lot",
+      "filterGroup": "lot",
+      "searchable": true,
+      "icon": "spark"
+    },
+    {
+      "id": "renovated",
+      "label": "Renovated",
+      "group": "lot",
+      "filterGroup": "lot",
+      "searchable": true,
+      "icon": "spark"
+    },
+    {
+      "id": "modern",
+      "label": "Modern",
+      "group": "lot",
+      "filterGroup": "lot",
+      "searchable": true,
+      "icon": "spark"
+    },
+    {
+      "id": "historic",
+      "label": "Historic",
+      "group": "lot",
+      "filterGroup": "lot",
+      "searchable": true,
+      "icon": "column"
+    },
+    {
+      "id": "gated-community",
+      "label": "Gated community",
+      "group": "lot",
+      "filterGroup": "lot",
+      "searchable": true,
+      "icon": "shield"
+    },
+    {
+      "id": "golf-course",
+      "label": "Golf course",
+      "group": "lot",
+      "filterGroup": "lot",
+      "searchable": true,
+      "icon": "flag"
+    },
+    {
+      "id": "marina",
+      "label": "Close to marina",
+      "group": "lot",
+      "filterGroup": "lot",
+      "searchable": true,
+      "icon": "anchor"
+    },
+    {
+      "id": "high-ceiling",
+      "label": "High ceiling",
+      "group": "interior",
+      "filterGroup": "indoor",
+      "searchable": false,
+      "icon": "ceiling"
+    },
+    {
+      "id": "air-conditioning",
+      "label": "Air conditioning",
+      "group": "interior",
+      "filterGroup": "indoor",
+      "searchable": true,
+      "icon": "snow"
+    },
+    {
+      "id": "kitchen-island",
+      "label": "Kitchen island",
+      "group": "interior",
+      "filterGroup": "indoor",
+      "searchable": false,
+      "icon": "kitchen"
+    },
+    {
+      "id": "washer-dryer",
+      "label": "Washer/dryer",
+      "group": "interior",
+      "filterGroup": "indoor",
+      "searchable": false,
+      "icon": "laundry"
+    },
+    {
+      "id": "laundry-room",
+      "label": "Laundry room",
+      "group": "interior",
+      "filterGroup": "indoor",
+      "searchable": false,
+      "icon": "laundry"
+    },
+    {
+      "id": "open-kitchen",
+      "label": "Open kitchen",
+      "group": "interior",
+      "filterGroup": "indoor",
+      "searchable": true,
+      "icon": "kitchen"
+    },
+    {
+      "id": "basement",
+      "label": "Basement",
+      "group": "interior",
+      "filterGroup": "indoor",
+      "searchable": false,
+      "icon": "stairs"
+    },
+    {
+      "id": "walk-in-closet",
+      "label": "Walk-in closet",
+      "group": "interior",
+      "filterGroup": "indoor",
+      "searchable": false,
+      "icon": "hanger"
+    },
+    {
+      "id": "elevator",
+      "label": "Elevator",
+      "group": "interior",
+      "filterGroup": "indoor",
+      "searchable": true,
+      "icon": "elevator"
+    },
+    {
+      "id": "fireplace",
+      "label": "Fireplace",
+      "group": "interior",
+      "filterGroup": "indoor",
+      "searchable": true,
+      "icon": "flame"
+    },
+    {
+      "id": "smart-home",
+      "label": "Smart home",
+      "group": "interior",
+      "filterGroup": "indoor",
+      "searchable": true,
+      "icon": "chip"
+    },
+    {
+      "id": "storage-room",
+      "label": "Storage room",
+      "group": "interior",
+      "filterGroup": "indoor",
+      "searchable": false,
+      "icon": "box"
+    },
+    {
+      "id": "furnished",
+      "label": "Furnished",
+      "group": "interior",
+      "filterGroup": "indoor",
+      "searchable": true,
+      "icon": "sofa"
+    },
+    {
+      "id": "security-system",
+      "label": "Security system",
+      "group": "interior",
+      "filterGroup": "indoor",
+      "searchable": true,
+      "icon": "shield"
+    },
+    {
+      "id": "gym",
+      "label": "Gym",
+      "group": "interior",
+      "filterGroup": "indoor",
+      "searchable": true,
+      "icon": "dumbbell"
+    },
+    {
+      "id": "wine-cellar",
+      "label": "Wine cellar",
+      "group": "interior",
+      "filterGroup": "indoor",
+      "searchable": true,
+      "icon": "wine"
+    },
+    {
+      "id": "home-cinema",
+      "label": "Home cinema",
+      "group": "interior",
+      "filterGroup": "indoor",
+      "searchable": true,
+      "icon": "film"
+    },
+    {
+      "id": "sauna",
+      "label": "Sauna",
+      "group": "interior",
+      "filterGroup": "indoor",
+      "searchable": true,
+      "icon": "steam"
+    },
+    {
+      "id": "indoor-pool",
+      "label": "Indoor pool",
+      "group": "interior",
+      "filterGroup": "indoor",
+      "searchable": true,
+      "icon": "pool"
+    },
+    {
+      "id": "terrace",
+      "label": "Terrace",
+      "group": "outdoor",
+      "filterGroup": "outdoor",
+      "searchable": true,
+      "icon": "terrace"
+    },
+    {
+      "id": "balcony",
+      "label": "Balcony",
+      "group": "outdoor",
+      "filterGroup": "outdoor",
+      "searchable": true,
+      "icon": "balcony"
+    },
+    {
+      "id": "parking",
+      "label": "Parking",
+      "group": "outdoor",
+      "filterGroup": "outdoor",
+      "searchable": false,
+      "icon": "car"
+    },
+    {
+      "id": "pool",
+      "label": "Pool",
+      "group": "outdoor",
+      "filterGroup": "outdoor",
+      "searchable": true,
+      "icon": "pool"
+    },
+    {
+      "id": "outdoor-living-space",
+      "label": "Outdoor living space",
+      "group": "outdoor",
+      "filterGroup": "outdoor",
+      "searchable": false,
+      "icon": "sun"
+    },
+    {
+      "id": "gate",
+      "label": "Gate",
+      "group": "outdoor",
+      "filterGroup": "outdoor",
+      "searchable": false,
+      "icon": "gate"
+    },
+    {
+      "id": "garden",
+      "label": "Garden",
+      "group": "outdoor",
+      "filterGroup": "outdoor",
+      "searchable": true,
+      "icon": "leaf"
+    },
+    {
+      "id": "garage",
+      "label": "Garage",
+      "group": "outdoor",
+      "filterGroup": "outdoor",
+      "searchable": true,
+      "icon": "car"
+    },
+    {
+      "id": "roof-terrace",
+      "label": "Roof terrace",
+      "group": "outdoor",
+      "filterGroup": "outdoor",
+      "searchable": true,
+      "icon": "terrace"
+    },
+    {
+      "id": "jacuzzi",
+      "label": "Jacuzzi",
+      "group": "outdoor",
+      "filterGroup": "outdoor",
+      "searchable": true,
+      "icon": "pool"
+    },
+    {
+      "id": "outdoor-kitchen",
+      "label": "Outdoor kitchen",
+      "group": "outdoor",
+      "filterGroup": "outdoor",
+      "searchable": true,
+      "icon": "kitchen"
+    },
+    {
+      "id": "tennis-court",
+      "label": "Tennis court",
+      "group": "outdoor",
+      "filterGroup": "outdoor",
+      "searchable": true,
+      "icon": "tennis"
+    }
+  ],
+  "propertyTypes": [
+    {
+      "id": "apartment",
+      "label": "Apartment",
+      "plural": "Apartments"
+    },
+    {
+      "id": "penthouse",
+      "label": "Penthouse",
+      "plural": "Penthouses"
+    },
+    {
+      "id": "maisonette",
+      "label": "Maisonette",
+      "plural": "Maisonettes"
+    },
+    {
+      "id": "residence",
+      "label": "Residence",
+      "plural": "Residences"
+    },
+    {
+      "id": "villa",
+      "label": "Villa",
+      "plural": "Villas"
+    },
+    {
+      "id": "house",
+      "label": "House",
+      "plural": "Houses"
+    },
+    {
+      "id": "townhouse",
+      "label": "Townhouse",
+      "plural": "Townhouses"
+    },
+    {
+      "id": "building",
+      "label": "Building",
+      "plural": "Buildings"
+    },
+    {
+      "id": "land",
+      "label": "Land",
+      "plural": "Land"
+    }
+  ],
+  "markets": [
+    {
+      "id": "kato-glyfada",
+      "label": "Kato Glyfada",
+      "city": "Glyfada",
+      "region": "Athens Riviera",
+      "lat": 37.8612,
+      "lng": 23.7522,
+      "summary": "The coastal heart of the Athens Riviera: the seafront promenade, marinas, the tram to the city and some of Athens' best international schools."
+    },
+    {
+      "id": "athens-center",
+      "label": "Athens Center",
+      "city": "Athens",
+      "region": "Central Athens",
+      "lat": 37.9843,
+      "lng": 23.7252,
+      "summary": "Neoclassical streets between Omonia and the historic triangle, with the metro, the markets and the Acropolis within walking distance."
+    },
+    {
+      "id": "piraeus",
+      "label": "Piraeus",
+      "city": "Piraeus",
+      "region": "Piraeus",
+      "lat": 37.9345,
+      "lng": 23.6497,
+      "summary": "The port city around Marina Zeas: yachts at the doorstep, waterfront cafés and the metro to central Athens."
+    },
+    {
+      "id": "voula",
+      "label": "Voula",
+      "city": "Voula",
+      "region": "Athens Riviera",
+      "lat": 37.8422,
+      "lng": 23.7765,
+      "summary": "A quieter stretch of the Riviera south of Glyfada, known for its organised beaches and residential calm."
+    },
+    {
+      "id": "athens",
+      "label": "Athens",
+      "city": "Athens",
+      "region": "Attica",
+      "lat": 37.9838,
+      "lng": 23.7275,
+      "summary": "Completed Netherfield projects across the wider Athens area."
+    }
+  ],
+  "categories": [
+    {
+      "id": "sea-view",
+      "label": "Sea view",
+      "icon": "wave",
+      "rule": {
+        "features": [
+          "sea-view"
+        ]
+      }
+    },
+    {
+      "id": "penthouses",
+      "label": "Penthouses",
+      "icon": "crown",
+      "rule": {
+        "types": [
+          "penthouse"
+        ]
+      }
+    },
+    {
+      "id": "athens-riviera",
+      "label": "Athens Riviera",
+      "icon": "sun",
+      "rule": {
+        "markets": [
+          "kato-glyfada",
+          "voula"
+        ]
+      }
+    },
+    {
+      "id": "city-living",
+      "label": "City living",
+      "icon": "city",
+      "rule": {
+        "markets": [
+          "athens-center",
+          "piraeus"
+        ]
+      }
+    },
+    {
+      "id": "terrace",
+      "label": "Terraces",
+      "icon": "terrace",
+      "rule": {
+        "features": [
+          "terrace"
+        ]
+      }
+    },
+    {
+      "id": "garden",
+      "label": "Garden",
+      "icon": "leaf",
+      "rule": {
+        "features": [
+          "garden"
+        ]
+      }
+    },
+    {
+      "id": "pool",
+      "label": "Pool",
+      "icon": "pool",
+      "rule": {
+        "features": [
+          "pool"
+        ]
+      }
+    },
+    {
+      "id": "new-built",
+      "label": "New built",
+      "icon": "spark",
+      "rule": {
+        "features": [
+          "new-built"
+        ]
+      }
+    },
+    {
+      "id": "family",
+      "label": "Family homes",
+      "icon": "home",
+      "rule": {
+        "bedrooms_from": 3
+      }
+    },
+    {
+      "id": "entry",
+      "label": "From €250k",
+      "icon": "key",
+      "rule": {
+        "price_to": 450000,
+        "status": [
+          "available"
+        ]
+      }
+    },
+    {
+      "id": "delivered",
+      "label": "Delivered",
+      "icon": "check",
+      "rule": {
+        "status": [
+          "sold"
+        ]
+      }
+    }
+  ]
+}

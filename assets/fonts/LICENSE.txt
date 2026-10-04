@@ -1,0 +1,5 @@
+Fonts in this folder
+
+Fraunces (Undercase Type) and Albert Sans (Usted), as distributed by Google Fonts,
+are licensed under the SIL Open Font License, Version 1.1: https://openfontlicense.org
+They are self-hosted here so that visitors' browsers do not contact third-party font servers.

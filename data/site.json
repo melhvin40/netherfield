@@ -1,0 +1,118 @@
+{
+  "_comment": "Agency-wide settings. Edited in admin.html (Settings). phone/whatsapp stay empty until the agency enters them; the Call and WhatsApp buttons only appear once they are set.",
+  "name": "Netherfield Developments",
+  "shortName": "Netherfield",
+  "tagline": "Quality always comes first",
+  "siteUrl": "https://netherfieldevelopments.com",
+  "previewUrl": "https://melhvin40.github.io/netherfield/",
+  "indexable": false,
+  "email": "info@netherfieldevelopments.com",
+  "phone": "",
+  "whatsapp": "",
+  "instagram": "https://www.instagram.com/netherfield_greece/",
+  "instagramHandle": "@netherfield_greece",
+  "address": {
+    "street": "Euro Center Mall, Leof. Dimarchou Aggelou Metaxa 27-29",
+    "city": "Glyfada",
+    "postalCode": "16674",
+    "country": "Greece",
+    "lat": 37.8649,
+    "lng": 23.7539
+  },
+  "keyFigures": [
+    {
+      "value": 12,
+      "label": "Years of experience",
+      "detail": "Real estate, construction, finance and design"
+    },
+    {
+      "value": 3,
+      "label": "Offices worldwide",
+      "detail": "Greece, Dubai and Cairo"
+    },
+    {
+      "value": 12,
+      "label": "Projects",
+      "detail": "Developed and delivered by the Netherfield team"
+    }
+  ],
+  "offices": [
+    {
+      "city": "Athens",
+      "country": "Greece",
+      "lat": 37.8649,
+      "lng": 23.7539,
+      "note": "Head office, Glyfada"
+    },
+    {
+      "city": "Dubai",
+      "country": "United Arab Emirates",
+      "lat": 25.2048,
+      "lng": 55.2708,
+      "note": "Middle East desk"
+    },
+    {
+      "city": "Cairo",
+      "country": "Egypt",
+      "lat": 30.0444,
+      "lng": 31.2357,
+      "note": "Egypt desk"
+    }
+  ],
+  "currencies": {
+    "base": "EUR",
+    "asOf": "2026-10-01",
+    "note": "Indicative conversion rates, updated by the Netherfield team.",
+    "rates": {
+      "EUR": 1,
+      "USD": 1.15,
+      "GBP": 0.86,
+      "AED": 4.22,
+      "SAR": 4.31,
+      "EGP": 56
+    },
+    "symbols": {
+      "EUR": "€",
+      "USD": "$",
+      "GBP": "£",
+      "AED": "AED ",
+      "SAR": "SAR ",
+      "EGP": "EGP "
+    }
+  },
+  "maps": {
+    "tiles": "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+    "tilesAttribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors &copy; <a href=\"https://carto.com/attributions\">CARTO</a>",
+    "satellite": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+    "satelliteAttribution": "Imagery &copy; Esri, Maxar, Earthstar Geographics",
+    "googleMapsEmbedKey": ""
+  },
+  "goldenVisa": {
+    "updated": "2026-10",
+    "tiers": [
+      {
+        "amount": 800000,
+        "label": "€800,000",
+        "where": "Attica (incl. Athens, Glyfada and Piraeus), Thessaloniki, Mykonos, Santorini and islands over 3,100 residents",
+        "rule": "One residential property of at least 120 m²"
+      },
+      {
+        "amount": 400000,
+        "label": "€400,000",
+        "where": "All other regions of Greece",
+        "rule": "One residential property of at least 120 m²"
+      },
+      {
+        "amount": 250000,
+        "label": "€250,000",
+        "where": "Anywhere in Greece",
+        "rule": "Conversion of a commercial building to residential use, or restoration of a listed building, completed before the application"
+      }
+    ]
+  },
+  "repo": {
+    "owner": "melhvin40",
+    "name": "netherfield",
+    "branch": "claude/blissful-mccarthy-qyd7fh"
+  }
+}

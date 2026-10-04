@@ -1,0 +1,830 @@
+{
+  "_comment": "Listings. Edited in admin.html. Figures marked indicative are sample values until the agency confirms them.",
+  "properties": [
+    {
+      "id": "glyfada-seaside",
+      "ref": "NF-1001",
+      "title": "Glyfada Seaside",
+      "status": "available",
+      "type": "penthouse",
+      "price": 890000,
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "livingArea": 142,
+      "lotSize": null,
+      "yearBuilt": null,
+      "location": {
+        "market": "kato-glyfada",
+        "area": "Kato Glyfada",
+        "city": "Glyfada",
+        "lat": 37.8598,
+        "lng": 23.75,
+        "radius": 300,
+        "label": "Prime Kato Glyfada",
+        "approximate": true,
+        "country": "Greece"
+      },
+      "goldenVisa": true,
+      "featured": true,
+      "description": [
+        "Glyfada Seaside is a quiet expression of coastal living: a contemporary residence moments from the Kato Glyfada seafront, its layered terraces softened by mature planting and deep, shaded balconies.",
+        "The penthouse occupies the upper levels, framed by generous outdoor rooms for slow mornings and long evenings above the Saronic Gulf.",
+        "Daily life is a short walk away: the beach promenade, the marinas, the boutiques of central Glyfada, international schools and the tram into Athens. As with every Netherfield home, the purchase is structured for the Greek Golden Visa and delivered with legal, relocation and rental support."
+      ],
+      "features": [
+        "sea-view",
+        "terrace",
+        "parking",
+        "elevator",
+        "air-conditioning",
+        "smart-home",
+        "coastal",
+        "new-built",
+        "modern",
+        "balcony",
+        "outdoor-living-space",
+        "privacy"
+      ],
+      "photos": [
+        {
+          "src": "img/properties/glyfada-seaside/01.jpg",
+          "w": 1280,
+          "h": 640,
+          "alt": "Glyfada Seaside, exterior",
+          "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAOABwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDYTSIoUjdjll568Z9akjNsXIdsgenSqUurNfWZiG6MDqw6mltzHHCsaNKCRnPFS61o2hoEaabuzQe3tWUlJcEdjVc2vPSqI1BIppHYOxB+UEA4qrNrN7JKTHLtXpjaKqniXFe8RUpK+h//2Q==",
+          "card": "img/properties/glyfada-seaside/01-card.jpg",
+          "cw": 960,
+          "ch": 480
+        }
+      ],
+      "video": null,
+      "virtualTour": null,
+      "floorplans": [],
+      "updated": "2026-10",
+      "indicative": true
+    },
+    {
+      "id": "eleftherias-3",
+      "ref": "NF-1002",
+      "title": "Eleftherias 3",
+      "status": "available",
+      "type": "apartment",
+      "price": 520000,
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "livingArea": 96,
+      "lotSize": null,
+      "yearBuilt": null,
+      "location": {
+        "market": "kato-glyfada",
+        "area": "Kato Glyfada",
+        "city": "Glyfada",
+        "lat": 37.8633,
+        "lng": 23.7517,
+        "radius": 300,
+        "label": "Prime Kato Glyfada",
+        "approximate": true,
+        "country": "Greece"
+      },
+      "goldenVisa": true,
+      "featured": true,
+      "description": [
+        "A boutique building on Eleftherias in the heart of Kato Glyfada, where sculpted, curving balconies give every home its own generous outdoor room.",
+        "The residence pairs an open living space with two bedrooms and two bathrooms: a calm, walkable base close to the tram line, the beach promenade and the cafés of central Glyfada.",
+        "Netherfield guides the purchase from reservation to title, including the residence permit application and, if required, long-term rental management."
+      ],
+      "features": [
+        "terrace",
+        "parking",
+        "elevator",
+        "air-conditioning",
+        "storage-room",
+        "coastal",
+        "new-built",
+        "modern",
+        "balcony",
+        "open-kitchen"
+      ],
+      "photos": [
+        {
+          "src": "img/properties/eleftherias-3/01.jpg",
+          "w": 1600,
+          "h": 874,
+          "alt": "Eleftherias 3, exterior",
+          "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAPABwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDoF1G4u9DmkjciVBkMpA4rlyPtMbSzupfPLNkk/lV200qeEtE1+4Qr2HFDabcxo0UM+5c9cAZrJu5pEi8PW5fWInEm0LyWCf41qapc+HG1CU3lvI82cM23rTF0GVUV4Lsx5UZGCaqv4alZi0l5uY9SV/8Ar007ITV2f//Z",
+          "card": "img/properties/eleftherias-3/01-card.jpg",
+          "cw": 959,
+          "ch": 524
+        }
+      ],
+      "video": null,
+      "virtualTour": null,
+      "floorplans": [],
+      "updated": "2026-09",
+      "indicative": true
+    },
+    {
+      "id": "agiou-konstantinou",
+      "ref": "NF-1003",
+      "title": "Agiou Konstantinou",
+      "status": "available",
+      "type": "apartment",
+      "price": 250000,
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "livingArea": 58,
+      "lotSize": null,
+      "yearBuilt": null,
+      "location": {
+        "market": "athens-center",
+        "area": "Omonia",
+        "city": "Athens",
+        "lat": 37.9842,
+        "lng": 23.724,
+        "radius": 250,
+        "label": "Athens Center",
+        "approximate": true,
+        "country": "Greece"
+      },
+      "goldenVisa": true,
+      "featured": true,
+      "description": [
+        "A central Athens address on Agiou Konstantinou, one of the grand avenues radiating from Omonia Square, with the metro, the central markets and the historic centre within walking distance.",
+        "Behind a crisp, perforated façade, the one-bedroom apartment is bright, compact and easy to let: Netherfield's most accessible entry into Greek residency by investment.",
+        "Our advisors confirm which Golden Visa route applies to this address before you reserve."
+      ],
+      "features": [
+        "elevator",
+        "air-conditioning",
+        "storage-room",
+        "furnished",
+        "city-view",
+        "modern",
+        "renovated",
+        "balcony"
+      ],
+      "photos": [
+        {
+          "src": "img/properties/agiou-konstantinou/01.jpg",
+          "w": 1000,
+          "h": 1250,
+          "alt": "Agiou Konstantinou, exterior",
+          "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAcABYDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCC0YW03nFc7RXQWFxDciDK7xIxUhiccY9aht9LC6eb0uAVONpHHWtC0P7uHBjI8z0+laVZJy0IgnYuizs/+fW2/KiragdiP++aKz5n3LsjKvY1t/D80N2/k8gs3oM1m6fNp0X2dEvXkZXyMg85x7Vzt9qF5c2zxz3Ejq2MgnrT7KZ1khAA4IxxTsSeiJMHUMgcqehC0VlWusXUduiKsWAO6n/GilYo/9k="
+        }
+      ],
+      "video": null,
+      "virtualTour": null,
+      "floorplans": [],
+      "updated": "2026-10",
+      "indicative": true
+    },
+    {
+      "id": "omirou-31",
+      "ref": "NF-1004",
+      "title": "Omirou 31",
+      "status": "available",
+      "type": "maisonette",
+      "price": 640000,
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "livingArea": 128,
+      "lotSize": null,
+      "yearBuilt": null,
+      "location": {
+        "market": "kato-glyfada",
+        "area": "Kato Glyfada",
+        "city": "Glyfada",
+        "lat": 37.8612,
+        "lng": 23.7547,
+        "radius": 300,
+        "label": "Prime Kato Glyfada",
+        "approximate": true,
+        "country": "Greece"
+      },
+      "goldenVisa": true,
+      "featured": true,
+      "description": [
+        "Set on Omirou in Kato Glyfada, this sculptural building wraps every level in flowing, curved balconies that glow warmly at dusk.",
+        "The maisonette pairs private outdoor space with a garden level: a family home with Glyfada's restaurants, marina and international schools close at hand.",
+        "Delivered with Netherfield's end-to-end support, from legal due diligence to the residence permit and furnishing."
+      ],
+      "features": [
+        "garden",
+        "terrace",
+        "parking",
+        "elevator",
+        "air-conditioning",
+        "coastal",
+        "new-built",
+        "modern",
+        "balcony",
+        "outdoor-living-space"
+      ],
+      "photos": [
+        {
+          "src": "img/properties/omirou-31/01.jpg",
+          "w": 932,
+          "h": 526,
+          "alt": "Omirou 31, exterior",
+          "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAQABwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDKj1BZJpEC7SpwM961DZYkhPnZMg9CAK49bG7fMwjcRg8seK6WS/hhgtir5IwDWkqknuQooreK4VsxDCsoZn5bHaseGSWJNqsMdelaPiSVbmWCSM+YQv3hyKyxuxzmsuZ7lNI//9k="
+        }
+      ],
+      "video": null,
+      "virtualTour": null,
+      "floorplans": [],
+      "updated": "2026-08",
+      "indicative": true
+    },
+    {
+      "id": "piraeus-fillelinon",
+      "ref": "NF-1005",
+      "title": "Piraeus Fillelinon",
+      "status": "available",
+      "type": "apartment",
+      "price": 430000,
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "livingArea": 88,
+      "lotSize": null,
+      "yearBuilt": null,
+      "location": {
+        "market": "piraeus",
+        "area": "Marina Zeas",
+        "city": "Piraeus",
+        "lat": 37.9348,
+        "lng": 23.6496,
+        "radius": 300,
+        "label": "Marina Zeas, Piraeus",
+        "approximate": true,
+        "country": "Greece"
+      },
+      "goldenVisa": true,
+      "featured": true,
+      "description": [
+        "Moments from the yachts of Marina Zeas, this address pairs a restored neoclassical frontage with a contemporary addition of planted terraces.",
+        "Central Athens is minutes away by metro and tram, with the harbour, waterfront cafés and the Piraeus seafront on the doorstep.",
+        "A characterful choice for buyers who want the energy of the port and the calm of a renovated, well-managed building."
+      ],
+      "features": [
+        "sea-view",
+        "terrace",
+        "elevator",
+        "air-conditioning",
+        "coastal",
+        "marina",
+        "modern",
+        "renovated",
+        "balcony",
+        "roof-terrace"
+      ],
+      "photos": [
+        {
+          "src": "img/properties/piraeus-fillelinon/01.jpg",
+          "w": 1570,
+          "h": 1054,
+          "alt": "Piraeus Fillelinon, exterior",
+          "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAATABwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCFIxu4ORmm3UiW7ISSA3FVdPnKNKZTheCB6c1JfSRuikqGwe9N1W3oSoK2pPaXkbvtY454wc5rcgKeWPnH51xSv5d8rINqgVbVmy5Dnls9aftX1Dk7GVZu0pkEjFhn1q5GigcZ/E5oorJ7miJAikEEcU8RoOAooooGf//Z",
+          "card": "img/properties/piraeus-fillelinon/01-card.jpg",
+          "cw": 959,
+          "ch": 644
+        }
+      ],
+      "video": null,
+      "virtualTour": null,
+      "floorplans": [],
+      "updated": "2026-09",
+      "indicative": true
+    },
+    {
+      "id": "papandreou-21",
+      "ref": "NF-1006",
+      "title": "Papandreou 21",
+      "status": "available",
+      "type": "penthouse",
+      "price": 1250000,
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "livingArea": 186,
+      "lotSize": null,
+      "yearBuilt": null,
+      "location": {
+        "market": "kato-glyfada",
+        "area": "Kato Glyfada",
+        "city": "Glyfada",
+        "lat": 37.8584,
+        "lng": 23.7533,
+        "radius": 300,
+        "label": "Prime Kato Glyfada",
+        "approximate": true,
+        "country": "Greece"
+      },
+      "goldenVisa": true,
+      "featured": true,
+      "description": [
+        "Papandreou 21 is defined by its sweeping balconies: white, sculpted forms that curve around each floor and frame the greenery of Kato Glyfada.",
+        "The penthouse spans the top of the building with generous terraces, a pool and four bedrooms: a family residence close to Glyfada's beaches and schools.",
+        "Netherfield's team handles the purchase, the Golden Visa application and, if you wish, the furnishing and rental of the home."
+      ],
+      "features": [
+        "pool",
+        "sea-view",
+        "terrace",
+        "parking",
+        "elevator",
+        "air-conditioning",
+        "security-system",
+        "smart-home",
+        "coastal",
+        "new-built",
+        "modern",
+        "balcony",
+        "outdoor-living-space",
+        "roof-terrace"
+      ],
+      "photos": [
+        {
+          "src": "img/properties/papandreou-21/01.jpg",
+          "w": 1600,
+          "h": 891,
+          "alt": "Papandreou 21, exterior",
+          "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAQABwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDeDwzRyG2kRigzntWc9/P5g2w8qM8EYNcjHeXCRosbFATyc9RWml0NgBkQkqQFyoJ/Sl7XmHGCR1FndzXNwFISJQPTk06S+gSRkaRiynBwDXEahqBjjzFuDqQRyOPyqidav2Jb7RKC3Jwe9NVWhShc/9k=",
+          "card": "img/properties/papandreou-21/01-card.jpg",
+          "cw": 959,
+          "ch": 534
+        }
+      ],
+      "video": null,
+      "virtualTour": null,
+      "floorplans": [],
+      "updated": "2026-10",
+      "indicative": true
+    },
+    {
+      "id": "karaiskaki-building",
+      "ref": "NF-1007",
+      "title": "Karaiskaki Building",
+      "status": "sold",
+      "type": "apartment",
+      "price": 390000,
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "livingArea": 84,
+      "lotSize": null,
+      "yearBuilt": null,
+      "location": {
+        "market": "athens",
+        "area": "Athens",
+        "city": "Athens",
+        "lat": 37.9838,
+        "lng": 23.7275,
+        "radius": 2500,
+        "label": "Athens, Greece",
+        "approximate": true,
+        "country": "Greece"
+      },
+      "goldenVisa": true,
+      "featured": false,
+      "description": [
+        "A completed Netherfield building in Athens: a slim, glass-fronted façade with warm, lit terraces on every level and a glazed rooftop pavilion.",
+        "Handed over to its owners as part of our delivered Golden Visa portfolio."
+      ],
+      "features": [
+        "elevator",
+        "air-conditioning",
+        "storage-room",
+        "new-built",
+        "modern",
+        "balcony",
+        "roof-terrace"
+      ],
+      "photos": [
+        {
+          "src": "img/properties/karaiskaki-building/01.jpg",
+          "w": 564,
+          "h": 751,
+          "alt": "Karaiskaki Building, exterior",
+          "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAcABUDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDoJHt4X2ytg+maiN3Zo53SjHaqfiXz4b+IwruBUA8dKxZHFwJIblyi54IGCa2dQyjSur3O3gjSaJZIyGU9CKKl0CNTo8AUYVRgcYyKKhzHyHnjeKri/Cm+Koy4Hymq8l9CyvIimQBhg7sf56VhWrkpISBwM9KY17NtCqVUd9oxmk0jRSdjSu9e1iSXCXcsaLwqqxAAorJe4lbG5yaKdkI//9k="
+        }
+      ],
+      "video": null,
+      "virtualTour": null,
+      "floorplans": [],
+      "updated": null,
+      "indicative": true
+    },
+    {
+      "id": "electra",
+      "ref": "NF-1008",
+      "title": "Electra",
+      "status": "sold",
+      "type": "residence",
+      "price": 610000,
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "livingArea": 134,
+      "lotSize": null,
+      "yearBuilt": null,
+      "location": {
+        "market": "athens",
+        "area": "Athens",
+        "city": "Athens",
+        "lat": 37.9838,
+        "lng": 23.7275,
+        "radius": 2500,
+        "label": "Athens, Greece",
+        "approximate": true,
+        "country": "Greece"
+      },
+      "goldenVisa": true,
+      "featured": false,
+      "description": [
+        "Electra is a residence of layered volumes, timber screens and a living green wall, with a pool at garden level.",
+        "Completed and handed over to its owners as part of our delivered portfolio."
+      ],
+      "features": [
+        "terrace",
+        "parking",
+        "elevator",
+        "air-conditioning",
+        "new-built",
+        "modern",
+        "balcony",
+        "pool"
+      ],
+      "photos": [
+        {
+          "src": "img/properties/electra/01.jpg",
+          "w": 1440,
+          "h": 1920,
+          "alt": "Electra, exterior",
+          "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAcABUDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDo/LwO4xVae4jRWjWJhgjDnqeaZq1/5t+sNtMURThmBABP1qzqVvHBpgZDvY9yc9xROr2M4UuVXkUp9VFpJ5LtkgA9M0VR1KOwa9JnuRExRflz7UVanN66EckV1ZJNEivI1s8bwr88kZGMqOwPrWBceJZXBtofktcnCnk9fWob66mt4EWN8bT1PWsi6H7jf3Jrltc6Hdlq41QzSb2JY9M0VkDqaKuyFc//2Q==",
+          "card": "img/properties/electra/01-card.jpg",
+          "cw": 960,
+          "ch": 1280
+        }
+      ],
+      "video": null,
+      "virtualTour": null,
+      "floorplans": [],
+      "updated": null,
+      "indicative": true
+    },
+    {
+      "id": "megalou-alexandrou",
+      "ref": "NF-1009",
+      "title": "Megalou Alexandrou",
+      "status": "sold",
+      "type": "apartment",
+      "price": 470000,
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "livingArea": 102,
+      "lotSize": null,
+      "yearBuilt": null,
+      "location": {
+        "market": "athens",
+        "area": "Athens",
+        "city": "Athens",
+        "lat": 37.9838,
+        "lng": 23.7275,
+        "radius": 2500,
+        "label": "Athens, Greece",
+        "approximate": true,
+        "country": "Greece"
+      },
+      "goldenVisa": true,
+      "featured": false,
+      "description": [
+        "Soft, rounded balconies and slatted timber details give Megalou Alexandrou a warm, residential calm.",
+        "Completed and handed over to its owners as part of our delivered portfolio."
+      ],
+      "features": [
+        "terrace",
+        "elevator",
+        "air-conditioning",
+        "storage-room",
+        "new-built",
+        "modern",
+        "balcony"
+      ],
+      "photos": [
+        {
+          "src": "img/properties/megalou-alexandrou/01.jpg",
+          "w": 1135,
+          "h": 1243,
+          "alt": "Megalou Alexandrou, exterior",
+          "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAcABoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDRDDGRx7U7MLlQVdnPBweBU+o2Zto/MiAfHYc1jW9nJIrHyJ+OuJcVVSbvZDhHTUmliiY7k3Ljrk1TM9qDjzl/Oqd3JPZNLGsbBm4PmPuyPasJrZSxOyXk+9EarsTKCud9rd3cEi3t4SwYfMzEgY9Kqx3BsbYBhDGCOSWI5rdWEf35P++zT5bO3uV23Mfmr6OSa5/auT1NVGyOHuHSVpWUxyLIQGYNnH4+tYrWc284d+v9+vRp9GsPKEUcAjTdkqhIBNN/sex/54/rUylJPQOW5//Z",
+          "card": "img/properties/megalou-alexandrou/01-card.jpg",
+          "cw": 960,
+          "ch": 1051
+        }
+      ],
+      "video": null,
+      "virtualTour": null,
+      "floorplans": [],
+      "updated": null,
+      "indicative": true
+    },
+    {
+      "id": "dodekanisou-building",
+      "ref": "NF-1010",
+      "title": "Dodekanisou Building",
+      "status": "sold",
+      "type": "apartment",
+      "price": 280000,
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "livingArea": 62,
+      "lotSize": null,
+      "yearBuilt": null,
+      "location": {
+        "market": "athens",
+        "area": "Athens",
+        "city": "Athens",
+        "lat": 37.9838,
+        "lng": 23.7275,
+        "radius": 2500,
+        "label": "Athens, Greece",
+        "approximate": true,
+        "country": "Greece"
+      },
+      "goldenVisa": true,
+      "featured": false,
+      "description": [
+        "A crisp white building of cantilevered terraces and glass balustrades, set within landscaped gardens and topped with a pergola.",
+        "Completed and handed over to its owners as part of our delivered portfolio."
+      ],
+      "features": [
+        "elevator",
+        "air-conditioning",
+        "new-built",
+        "modern",
+        "balcony",
+        "garden",
+        "roof-terrace"
+      ],
+      "photos": [
+        {
+          "src": "img/properties/dodekanisou-building/01.jpg",
+          "w": 819,
+          "h": 1024,
+          "alt": "Dodekanisou Building, exterior",
+          "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAcABYDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDcmtn2nygu4cnccACoLWVJMh1CsDjhs5qrBqj6tIjQERQnhsnnihZHV24kKq/Voh/OtPayuQqasamz/ZNFR6VqsN8JkcorwuVOe47Gil7UfszhtEklVXkhJBTqF6mrQvXurhrd5NhIz87EA+1ZGlSvDOXRiCBnFdL4d0+2v5Zri6Te6nOOgrPoWjOk0i7V91jcI5fkqjdPxoq1qFzK9wUBCInCqgwAKKLDP//Z"
+        }
+      ],
+      "video": null,
+      "virtualTour": null,
+      "floorplans": [],
+      "updated": null,
+      "indicative": true
+    },
+    {
+      "id": "megalou",
+      "ref": "NF-1011",
+      "title": "Megalou",
+      "status": "sold",
+      "type": "maisonette",
+      "price": 680000,
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "livingArea": 146,
+      "lotSize": null,
+      "yearBuilt": null,
+      "location": {
+        "market": "athens",
+        "area": "Athens",
+        "city": "Athens",
+        "lat": 37.9838,
+        "lng": 23.7275,
+        "radius": 2500,
+        "label": "Athens, Greece",
+        "approximate": true,
+        "country": "Greece"
+      },
+      "goldenVisa": true,
+      "featured": false,
+      "description": [
+        "Long, horizontal terraces and warm timber panels define Megalou, a building that settles quietly into its tree-lined street.",
+        "Completed and handed over to its owners as part of our delivered portfolio."
+      ],
+      "features": [
+        "garden",
+        "terrace",
+        "parking",
+        "elevator",
+        "new-built",
+        "modern",
+        "balcony"
+      ],
+      "photos": [
+        {
+          "src": "img/properties/megalou/01.jpg",
+          "w": 1600,
+          "h": 1358,
+          "alt": "Megalou, exterior",
+          "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAYABwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCxoBl1CxEk4w+cHjGa2EtkhTzJW2qO5rk9Dv7S1utkQm+78vzZGa35pGmidnJIKZ5Gcf0qXUa0NFTu7luKaK6DrC+SvUEVWe1O48Vz0uotpiyPDgs4wD0wfpWTJ4h1F3yZyPpVKViXG5p2WlQwfvJJQXHPytWk95CkZUI7EjBJwf60UVzJtnS4pGLqUhuV2rBjHTgD+tZMlk4c7WXHuaKK2Rk0f//Z",
+          "card": "img/properties/megalou/01-card.jpg",
+          "cw": 959,
+          "ch": 814
+        }
+      ],
+      "video": null,
+      "virtualTour": null,
+      "floorplans": [],
+      "updated": null,
+      "indicative": true
+    },
+    {
+      "id": "voula",
+      "ref": "NF-1012",
+      "title": "Voula",
+      "status": "sold",
+      "type": "residence",
+      "price": 1150000,
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "livingArea": 198,
+      "lotSize": null,
+      "yearBuilt": null,
+      "location": {
+        "market": "voula",
+        "area": "Voula",
+        "city": "Voula",
+        "lat": 37.8422,
+        "lng": 23.7765,
+        "radius": 600,
+        "label": "Voula, Athens Riviera",
+        "approximate": true,
+        "country": "Greece"
+      },
+      "goldenVisa": true,
+      "featured": false,
+      "description": [
+        "A delivered Netherfield residence in Voula on the Athens Riviera: framed white volumes, deep terraces and planters that spill greenery down the façade.",
+        "Completed and handed over to its owners as part of our delivered portfolio."
+      ],
+      "features": [
+        "sea-view",
+        "pool",
+        "garden",
+        "terrace",
+        "parking",
+        "security-system",
+        "coastal",
+        "new-built",
+        "modern",
+        "balcony",
+        "privacy"
+      ],
+      "photos": [
+        {
+          "src": "img/properties/voula/01.jpg",
+          "w": 819,
+          "h": 1024,
+          "alt": "Voula, exterior",
+          "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAcABYDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDoN6RYeRgqA8k9BUNlrdnPPsWVAM4yTWbcXFpqrJEsp8oZ3c4H41y7wQi+8pPlH/PRT8tazlroZxWmp65AyumUYMPUUVydv4mstGtorVyZ225ygwBRUXRaRyGlReddC1dyqsPlZTzn1rMIYTyASSybSR6VLbXEsTI0bYYdDVh/3oBbvjOOKSY2rF57lfJhMkIkkCBSSKKzo3Z5njLHavTFFRYD/9k="
+        }
+      ],
+      "video": null,
+      "virtualTour": null,
+      "floorplans": [],
+      "updated": null,
+      "indicative": true
+    },
+    {
+      "id": "asklipiou",
+      "ref": "NF-1013",
+      "title": "Asklipiou",
+      "status": "sold",
+      "type": "apartment",
+      "price": 360000,
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "livingArea": 78,
+      "lotSize": null,
+      "yearBuilt": null,
+      "location": {
+        "market": "athens",
+        "area": "Athens",
+        "city": "Athens",
+        "lat": 37.9838,
+        "lng": 23.7275,
+        "radius": 2500,
+        "label": "Athens, Greece",
+        "approximate": true,
+        "country": "Greece"
+      },
+      "goldenVisa": true,
+      "featured": false,
+      "description": [
+        "Asklipiou is drawn in light: sculpted balconies traced by fine lines of illumination, a pergola crown and gardens at street level.",
+        "Completed and handed over to its owners as part of our delivered portfolio."
+      ],
+      "features": [
+        "elevator",
+        "air-conditioning",
+        "storage-room",
+        "new-built",
+        "modern",
+        "balcony",
+        "roof-terrace"
+      ],
+      "photos": [
+        {
+          "src": "img/properties/asklipiou/01.jpg",
+          "w": 1248,
+          "h": 918,
+          "alt": "Asklipiou, exterior",
+          "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAVABwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCFIovs/ndU25BqNLeWVBIkLFW6ZGPyp0r2lzaW8cdzu+TjHAz7+laamWVLffPtXZxtO3GB61dSs27IinStqzLS283OF5HFSf2afSrdrfWNnhbiQ5bLAnB71qLf6SUBN7bjIzgsM1rGt7quZSpvmdjyi3uJYJGMZAz1GOKux6xOEw6BsDC/MRtoornaR0JjJbk3AjZ1GY1wMGoHgj4JBywz1oorNDP/2Q==",
+          "card": "img/properties/asklipiou/01-card.jpg",
+          "cw": 960,
+          "ch": 706
+        }
+      ],
+      "video": null,
+      "virtualTour": null,
+      "floorplans": [],
+      "updated": null,
+      "indicative": true
+    },
+    {
+      "id": "orfeos",
+      "ref": "NF-1014",
+      "title": "Orfeos",
+      "status": "sold",
+      "type": "apartment",
+      "price": 265000,
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "livingArea": 54,
+      "lotSize": null,
+      "yearBuilt": null,
+      "location": {
+        "market": "athens",
+        "area": "Athens",
+        "city": "Athens",
+        "lat": 37.9838,
+        "lng": 23.7275,
+        "radius": 2500,
+        "label": "Athens, Greece",
+        "approximate": true,
+        "country": "Greece"
+      },
+      "goldenVisa": true,
+      "featured": false,
+      "description": [
+        "Orfeos balances solid, cream-coloured volumes with open terraces and cascading planting.",
+        "Completed and handed over to its owners as part of our delivered portfolio."
+      ],
+      "features": [
+        "elevator",
+        "air-conditioning",
+        "new-built",
+        "modern",
+        "balcony"
+      ],
+      "photos": [
+        {
+          "src": "img/properties/orfeos/01.jpg",
+          "w": 768,
+          "h": 960,
+          "alt": "Orfeos, exterior",
+          "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAcABYDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDQm2wxeZJwtaFtp0V7YRz27kMy5+boa5DVtTt9QtEeI/dPMZGD+ddF4avdYfT4xHYRC2VcId3JH505zfQUYK2o2SB4ZWjcYYUVswqsyu93Cscm7kZzjiimqq6idJnmciRQad5W4M7Pnp1H1rdsPFEmnWdrbwxgpGmHz3rl1PmR5bnFPbiIfXFZPY0TNK71PUtSvHmQmND0AJAoqjNPIhVVOABRQK5//9k="
+        }
+      ],
+      "video": null,
+      "virtualTour": null,
+      "floorplans": [],
+      "updated": null,
+      "indicative": true
+    }
+  ]
+}

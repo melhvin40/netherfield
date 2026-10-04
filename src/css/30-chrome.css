@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Header, drawer, footer, back-to-top
+   ========================================================================== */
+.hdr{position:sticky; top:0; z-index:200; background:var(--navy-950); color:var(--paper); border-bottom:1px solid transparent; transition:box-shadow .3s var(--ease), border-color .3s var(--ease)}
+.hdr.is-scrolled{border-bottom-color:var(--line-dark); box-shadow:0 12px 30px -24px rgba(0,0,0,.7)}
+.hdr-in{display:flex; align-items:center; justify-content:space-between; gap:2rem; height:var(--hdr-h)}
+.hdr-logo img{height:34px; width:auto}
+.hdr-nav{display:flex; align-items:center; gap:clamp(1.2rem, 2.2vw, 2.4rem)}
+.hdr-nav a{position:relative; font-size:.86rem; font-weight:500; letter-spacing:.02em; color:rgba(247,243,234,.74); padding-block:.6rem; transition:color .2s}
+.hdr-nav a::after{content:""; position:absolute; left:0; right:0; bottom:.1rem; height:1px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .35s var(--ease)}
+.hdr-nav a:hover{color:var(--paper)}
+.hdr-nav a:hover::after,.hdr-nav a[aria-current="page"]::after{transform:scaleX(1)}
+.hdr-nav a[aria-current="page"]{color:var(--paper)}
+.hdr-act{display:flex; align-items:center; gap:.6rem}
+.hdr-icon{position:relative; width:42px; height:42px; display:grid; place-items:center; border-radius:50%; color:rgba(247,243,234,.8); transition:color .2s, background .2s}
+.hdr-icon:hover{color:var(--gold-300); background:rgba(247,243,234,.06)}
+.hdr-icon .i{width:20px; height:20px}
+.hdr-badge{position:absolute; top:3px; right:1px; min-width:17px; height:17px; padding:0 4px; border-radius:9px; background:var(--gold); color:var(--navy-950); font:700 .62rem/17px var(--sans); text-align:center}
+.hdr-cta{margin-left:.6rem}
+.hdr-burger{display:none; width:44px; height:44px; border:0; background:none; color:var(--paper); place-items:center}
+.hdr-burger .i{width:26px; height:26px}
+
+.drawer{position:fixed; inset:0; z-index:300; display:flex; flex-direction:column; gap:2.4rem; padding:1.1rem var(--gut) 2.4rem; background:var(--navy-950); color:var(--paper); overflow-y:auto}
+.drawer-top{display:flex; justify-content:space-between; align-items:center}
+.drawer-top img{height:30px; width:auto}
+.drawer-close{width:44px; height:44px; border:0; background:none; color:var(--paper); display:grid; place-items:center}
+.drawer-close .i{width:26px; height:26px}
+.drawer-nav{display:flex; flex-direction:column; gap:1.1rem}
+.drawer-nav a{font:330 clamp(1.7rem, 7vw, 2.3rem)/1.15 var(--serif); color:var(--paper)}
+.drawer-nav a[aria-current="page"]{color:var(--gold-300); font-style:italic}
+.drawer-foot{margin-top:auto; display:flex; flex-direction:column; gap:1rem; color:rgba(247,243,234,.7); font-size:.9rem}
+.drawer-foot .btn{align-self:flex-start}
+
+.ftr{background:var(--navy-950); color:rgba(247,243,234,.7); padding-block:clamp(64px, 8vw, 104px) 2rem; font-size:.92rem}
+.ftr-grid{display:grid; grid-template-columns:1.5fr 1fr 1fr 1.2fr; gap:clamp(2rem, 4vw, 4rem)}
+.ftr-brand img{height:32px; width:auto; margin-bottom:1.4rem}
+.ftr-brand p{max-width:34ch; line-height:1.65}
+.ftr-offices{margin-top:1rem; font:600 .66rem/1.4 var(--sans)!important; letter-spacing:.24em; text-transform:uppercase; color:var(--gold-300)}
+.ftr-h{font:600 .66rem/1.4 var(--sans); letter-spacing:.24em; text-transform:uppercase; color:var(--paper); margin-bottom:1.3rem}
+.ftr ul li{margin-bottom:.7rem}
+.ftr a{transition:color .2s}
+.ftr a:hover{color:var(--gold-300)}
+.ftr-contact li{line-height:1.55}
+.ftr-bottom{display:flex; flex-wrap:wrap; justify-content:space-between; gap:.8rem 2rem; margin-top:clamp(48px, 6vw, 80px); padding-top:1.6rem; border-top:1px solid var(--line-dark); font-size:.8rem; color:rgba(247,243,234,.55)}
+
+.totop{position:fixed; right:1.2rem; bottom:1.2rem; z-index:150; width:46px; height:46px; display:grid; place-items:center; border-radius:50%; border:1px solid var(--line-2); background:var(--white); color:var(--navy-950); box-shadow:var(--sh-1); transition:background .2s}
+.totop:hover{background:var(--paper-2)}
+.totop .i{width:20px; height:20px}
+
+@media (max-width:1100px){
+  .hdr-nav{display:none}
+  .hdr-burger{display:grid}
+  .hdr-cta{display:none}
+  .ftr-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  :root{--hdr-h:64px}
+  .hdr-logo img{height:28px}
+  .hdr-insta{display:none}
+  .ftr-grid{grid-template-columns:1fr}
+}
