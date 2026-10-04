@@ -1,5 +1,10 @@
 # Netherfield Developments: website redesign concept
 
+> **This repository is the finished demo and is frozen.** It is published at
+> https://melhvin40.github.io/netherfield/ and is not changed any further; the Pages workflow no
+> longer runs on a push. Further development happens in **netherfield-v2**, which starts as an exact
+> copy of commit `60c4ac1` and has its own preview address.
+
 A quiet-luxury redesign of the Netherfield Developments website: Greek Golden Visa real
 estate in Glyfada, central Athens and Piraeus. The property search and the property pages
 follow JamesEdition, with the same filters, categories and features.
@@ -103,7 +108,8 @@ their file names in `img/benefits/`.
 
 ## Deployment
 
-`.github/workflows/pages.yml` builds and deploys to GitHub Pages on every push to
-`claude/blissful-mccarthy-qyd7fh` or `main` (Settings → Pages → Source: *GitHub Actions*).
+`.github/workflows/pages.yml` builds and deploys to GitHub Pages (Settings → Pages → Source:
+*GitHub Actions*). In this frozen repository it only runs when started by hand; in netherfield-v2 it
+runs on every push to the working branch or `main`.
 GitHub Pages for a private repository needs a paid GitHub plan; on a free plan the
 repository has to be public.

@@ -1,10 +1,13 @@
 name: Deploy to GitHub Pages
 
 # Builds the HTML pages from data/*.json and src/ (node tools/build.mjs, no dependencies) and
-# publishes the site. Runs on every push, including the commits made by the agency admin (admin.html).
+# publishes the site.
+#
+# This repository is the frozen demo: it is deployed and stays as it is, so the workflow no longer
+# runs on a push and the published site cannot change by accident. Work continues in netherfield-v2,
+# where the same workflow runs on every push again. Run this one by hand (Actions -> Deploy to
+# GitHub Pages -> Run workflow) only to restore the demo if it is ever needed.
 on:
-  push:
-    branches: ["claude/blissful-mccarthy-qyd7fh", "main"]
   workflow_dispatch:
 
 permissions:
