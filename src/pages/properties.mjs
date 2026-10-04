@@ -3,18 +3,9 @@
 import { esc, icon, formatMoney } from '../lib/util.mjs';
 import { isSold } from '../lib/model.mjs';
 import { SORTS, MEDIA, STATUSES, emptyState, search, facetCounts } from '../lib/search.mjs';
-import { heroVariants } from '../partials.mjs';
+import { filmHero } from '../partials.mjs';
+import { FILMS } from '../media.mjs';
 import { cardHTML } from '../templates/card.mjs';
-
-const OPTIONS = [{
-  id: 'properties-hero', title: 'Properties: hero', default: 'scope',
-  variants: [
-    { id: 'scope', label: 'Cinemascope film', note: 'A wide, slow-motion band of the Aegean; the title sits below on paper, never over the image.' },
-    { id: 'cinema', label: 'Full-bleed film', note: 'The film fills the hero; the title rests on a soft gradient.' },
-    { id: 'split', label: 'Editorial frame', note: 'Title on paper beside the film in a framed panel.' },
-    { id: 'minimal', label: 'JamesEdition-style', note: 'No imagery: straight into search and listings.' }
-  ]
-}];
 
 export const PRICE_STEPS = [250000, 300000, 400000, 500000, 600000, 800000, 1000000, 1250000, 1500000, 2000000, 3000000];
 export const AREA_STEPS = [50, 75, 100, 120, 150, 200, 250, 300];
@@ -84,27 +75,6 @@ function filterSheet(ctx, counts) {
 </aside>`;
 }
 
-function seoBlock(ctx) {
-  const { tax, properties } = ctx;
-  const used = new Set(properties.flatMap(p => p.features || []));
-  const feats = tax.features.filter(f => f.searchable && used.has(f.id)).slice(0, 12);
-  const types = tax.propertyTypes.filter(t => properties.some(p => p.type === t.id));
-  return `<section class="sec-tight ls-seo">
-  <div class="wrap ls-seo-grid">
-    <div class="ls-seo-text">
-      <h2 class="h3">Golden Visa homes on the Athens Riviera</h2>
-      <p>Netherfield's portfolio spans Kato Glyfada, central Athens and the port of Piraeus: contemporary new builds and characterful renovations, each presented with its Golden Visa route, indicative yield and the support of one team from reservation to residence permit.</p>
-      <p>Save the homes you like, set up a search for your criteria, or book a consultation and we will share floor plans, availability and current pricing.</p>
-    </div>
-    <nav class="ls-seo-links" aria-label="Popular searches">
-      <div><h3>By area</h3><ul>${tax.markets.filter(m => properties.some(p => p.location?.market === m.id)).map(m => `<li><a href="properties.html?location=${m.id}">Properties in ${esc(m.label)}</a></li>`).join('')}</ul></div>
-      <div><h3>By type</h3><ul>${types.map(t => `<li><a href="properties.html?type=${t.id}">${esc(t.plural)}</a></li>`).join('')}</ul></div>
-      <div><h3>By feature</h3><ul>${feats.map(f => `<li><a href="properties.html?features=${f.id}">${esc(f.label)}</a></li>`).join('')}</ul></div>
-    </nav>
-  </div>
-</section>`;
-}
-
 export function listingPage(ctx) {
   // The full JamesEdition filter set is offered, as on JamesEdition: every property type, area and
   // searchable feature, each with its live count (options without matches are shown dimmed).
@@ -116,12 +86,11 @@ export function listingPage(ctx) {
   const firstPage = results.slice(0, 12);
   const available = properties.filter(p => !isSold(p)).length;
 
-  const hero = heroVariants('properties-hero', {
-    clip: 'bay', eyebrow: 'Our portfolio',
+  const hero = filmHero({
+    clip: FILMS.properties, cls: 'ph-short', eyebrow: 'Our portfolio',
     title: 'Golden Visa properties <em>in Greece</em>',
-    lede: 'Residences in Kato Glyfada, central Athens and Piraeus, each presented with its Golden Visa route and delivered with legal and relocation support.',
-    variants: ['scope', 'cinema', 'split', 'minimal']
-  }).replace(/class="ph ph-(cinema|scope|split)"/g, 'class="ph ph-$1 ph-short"');
+    lede: 'Residences in Kato Glyfada, central Athens and Piraeus, each presented with its Golden Visa route and delivered with legal and relocation support.'
+  });
 
   const pills = `
     <div class="ls-pillwrap"><button class="ls-pill" type="button" aria-expanded="false" data-pop="price"><span data-pill-label="price">Price</span>${icon('chevron-down', 16)}</button>
@@ -206,7 +175,6 @@ export function listingPage(ctx) {
     <p class="fine ls-fine">Prices, sizes and features are indicative and confirmed per property by the Netherfield team. Converted prices use indicative rates (${esc(site.currencies.asOf)}).</p>
   </div>
 </section>
-${seoBlock(ctx)}
 ${filterSheet(ctx, counts)}`;
 
   const slim = properties.map(p => ({ ...p, description: (p.description || []).slice(0, 1) }));
@@ -214,7 +182,7 @@ ${filterSheet(ctx, counts)}`;
     path: 'properties.html', active: 'properties', bodyClass: 'pg-listing',
     title: 'Golden Visa Properties in Greece | Netherfield Developments',
     description: 'Search Golden Visa properties in Kato Glyfada, central Athens and Piraeus: filter by price, type, bedrooms, view and features, on a list or a map.',
-    ogImage: 'img/hero/bay.jpg', leaflet: true, options: OPTIONS, scripts: ['listing'],
+    ogImage: `img/hero/${FILMS.properties}.jpg`, leaflet: true, scripts: ['listing'],
     data: { site: { currencies: site.currencies, maps: site.maps, email: site.email, name: site.name }, tax, properties: slim, perPage: 12, priceSteps: PRICE_STEPS, areaSteps: AREA_STEPS },
     content
   };

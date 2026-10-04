@@ -42,7 +42,7 @@ export function contactPage(ctx) {
     path: 'contact.html', active: '', bodyClass: 'pg-contact',
     title: 'Book a Consultation | Netherfield Developments',
     description: `Contact ${site.name} to book a Golden Visa consultation. ${site.address.street}, ${site.address.city} ${site.address.postalCode}, Greece.`,
-    ogImage: 'img/hero/mykonos.jpg', leaflet: true, scripts: ['pages'],
+    leaflet: true, scripts: ['pages'],
     data: { site: { email: site.email, maps: site.maps, name: site.name, currencies: site.currencies } },
     content
   };

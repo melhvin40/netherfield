@@ -1,15 +1,17 @@
 // Testimonials ("Client stories"): persuasion without invented reviews. Real proof (figures, delivered
 // projects, the service promise) and a story component that fills itself from data/testimonials.json.
 import { esc, icon } from '../lib/util.mjs';
-import { heroVariants } from '../partials.mjs';
+import { filmHero } from '../partials.mjs';
+import { FILMS } from '../media.mjs';
 import { pageUrl, isSold, locationLine } from '../lib/model.mjs';
 
-const OPTIONS = [
-  { id: 'stories', title: 'Testimonials: client stories block', default: 'live', variants: [
-    { id: 'live', label: 'As published', note: 'Shows real stories once the agency adds them in the admin; until then, an invitation to speak with an owner.' },
-    { id: 'preview', label: 'Preview the story layout', note: 'Placeholder cards, clearly marked, to judge the design before real stories arrive.' }
-  ] }
+// Placeholder stories show the layout until the agency publishes real ones (with the client's consent).
+const SAMPLES = [
+  { quote: 'A sentence or two from the family, in their own words: why they chose Greece, how the purchase went, what the team made easier.', name: 'Client name', from: 'Home city', property: 'Property' },
+  { quote: 'Stories are published only with the client’s written consent, and can be anonymised to first names or initials.', name: 'Client name', from: 'Home city', property: 'Property' },
+  { quote: 'Short is better: two or three lines read beautifully here. Longer stories open on their own page.', name: 'Client name', from: 'Home city', property: 'Property' }
 ];
+const HERO_SAMPLE = { quote: 'The first published client story appears here, set over the film: a short line in the client’s own words.', name: 'Client name', from: 'Home city', property: 'Property' };
 
 const PROMISE = [
   ['users', 'One team, start to finish', 'Property selection, legal work, relocation, interior design and rental management, handled by people who know your file.'],
@@ -18,6 +20,15 @@ const PROMISE = [
   ['school', 'Families first', 'Schools, healthcare and the practicalities of a move, planned around the people who are moving.'],
   ['key', 'After the keys', 'Furnishing, long-term tenants and upkeep, so your home keeps working for you when you are away.']
 ];
+
+function heroQuote(t, sample) {
+  return `<figure class="ph-quote">
+    ${sample ? '<span class="ph-quote-flag">Sample</span>' : ''}
+    ${icon('quote', 28)}
+    <blockquote><p>${esc(t.quote)}</p></blockquote>
+    <figcaption><span class="ph-quote-name">${esc(t.name)}</span><span class="ph-quote-meta">${esc([t.from, t.property].filter(Boolean).join(' · '))}</span></figcaption>
+  </figure>`;
+}
 
 function storyCards(list, sample) {
   return list.map(t => `<figure class="st${sample ? ' st-sample' : ''}">
@@ -32,22 +43,10 @@ export function testimonialsPage(ctx) {
   const { site, properties, testimonials } = ctx;
   const delivered = properties.filter(isSold);
   const k = site.keyFigures;
-  const sample = [
-    { quote: 'A sentence or two from the family, in their own words: why they chose Greece, how the purchase went, what the team made easier.', name: 'Client name', from: 'Home city', property: 'Property' },
-    { quote: 'Stories are published only with the client’s written consent, and can be anonymised to first names or initials.', name: 'Client name', from: 'Home city', property: 'Property' },
-    { quote: 'Short is better: two or three lines read beautifully here. Longer stories open on their own page.', name: 'Client name', from: 'Home city', property: 'Property' }
-  ];
-  const live = testimonials.length
-    ? `<div class="st-grid">${storyCards(testimonials, false)}</div>`
-    : `<div class="st-invite">
-        <div class="st-invite-text">
-          <p class="st-invite-h">Hear it from an owner</p>
-          <p>We publish client stories only with their consent, and the first are being written now. In the meantime, we will gladly connect you with a Netherfield owner who has agreed to speak with prospective buyers.</p>
-        </div>
-        <a class="btn btn-primary" href="mailto:${esc(site.email)}?subject=${encodeURIComponent('Reference request')}&amp;body=${encodeURIComponent('I would like to speak with a Netherfield owner before I decide.\n\nName:\nPhone:\nBest time to call:')}">Request a reference call</a>
-      </div>`;
+  const published = testimonials.length > 0;
+  const reference = `mailto:${esc(site.email)}?subject=${encodeURIComponent('Reference request')}&amp;body=${encodeURIComponent('I would like to speak with a Netherfield owner before I decide.\n\nName:\nPhone:\nBest time to call:')}`;
   const content = [
-    heroVariants('stories-hero', { clip: 'beach', eyebrow: 'Testimonials', title: 'Trust, earned <em>one family at a time</em>', lede: 'For most of our clients a Greek home is also a new chapter. Here is what working with Netherfield looks like, and how to hear it first-hand.', variants: ['scope'] }),
+    filmHero({ clip: FILMS.testimonials, eyebrow: 'Testimonials', title: 'Trust, earned <em>one family at a time</em>', lede: 'For most of our clients a Greek home is also a new chapter. Here is what working with Netherfield looks like, and how to hear it first-hand.', extra: published ? heroQuote(testimonials[0], false) : heroQuote(HERO_SAMPLE, true) }),
     `<section class="sec-tight proof" aria-label="Netherfield in figures">
   <div class="wrap"><dl class="proof-grid">
     ${k.map(f => `<div><dt data-count="${f.value}">${f.value}</dt><dd>${esc(f.label)}</dd></div>`).join('')}
@@ -57,8 +56,8 @@ export function testimonialsPage(ctx) {
     `<section class="sec stories" aria-labelledby="hStories">
   <div class="wrap">
     <div class="sec-head"><p class="eyebrow">In their words</p><h2 class="h2" id="hStories">Client stories</h2></div>
-    <div data-variant-of="stories" data-variant="live">${live}</div>
-    <div data-variant-of="stories" data-variant="preview"><div class="st-grid">${storyCards(sample, true)}</div></div>
+    <div class="st-grid">${published ? storyCards(testimonials, false) : storyCards(SAMPLES, true)}</div>
+    <p class="st-ref">${published ? 'Prefer to hear it first-hand?' : 'The first client stories are being written now. Prefer to hear it first-hand?'} <a class="link-underline" href="${reference}">Request a reference call</a> with a Netherfield owner.</p>
   </div>
 </section>`,
     `<section class="sec delivered" aria-labelledby="hDelivered">
@@ -81,7 +80,7 @@ export function testimonialsPage(ctx) {
     path: 'testimonials.html', active: 'testimonials', bodyClass: 'pg-stories',
     title: 'Client Stories | Netherfield Developments',
     description: 'How Netherfield works with families buying a Golden Visa home in Greece: delivered projects, our service promise and how to speak with an owner.',
-    ogImage: 'img/hero/beach.jpg', options: OPTIONS,
+    ogImage: `img/hero/${FILMS.testimonials}.jpg`,
     content
   };
 }

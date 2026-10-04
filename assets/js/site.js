@@ -50,7 +50,7 @@ if (revealEls.length && 'IntersectionObserver' in window && !reducedMotion()) {
   revealEls.forEach(el => io.observe(el));
 } else revealEls.forEach(el => el.classList.add('is-in'));
 
-/* film loops: play only while visible (hidden design variants never play), never with reduced motion.
+/* film loops: play only while visible, never with reduced motion.
    Chrome may pause muted background video to save power; it resumes on a retry. */
 const films = document.querySelectorAll('video[data-autoplay]');
 function playFilm(v) {
@@ -109,6 +109,3 @@ if (site) {
   paintPrefs(site);
   document.addEventListener('nf:prefs-change', () => paintPrefs(site));
 }
-
-/* design options panel (only on pages that offer alternatives) */
-if (document.getElementById('nf-options-data')) import('./options.js');

@@ -36,6 +36,32 @@ async function assetVersion() {
   return hashString(all);
 }
 
+// House rule: every film and every decorative image appears once on the whole site. A film counts once
+// however it is referenced (poster, .mp4, .webm); the share image in <head> is metadata and not counted.
+// Listing photos are excluded: a listing's photos appear wherever that listing does.
+async function checkMedia(pages) {
+  const uses = new Map();
+  const add = (key, page) => uses.set(key, [...(uses.get(key) || []), page.path]);
+  for (const page of pages) {
+    const html = page.content;
+    for (const v of html.matchAll(/<video\b[\s\S]*?<\/video>/g)) {
+      const names = new Set([...v[0].matchAll(/(?:img\/hero|video)\/([\w-]+)\.(?:jpg|mp4|webm)/g)].map(m => m[1]));
+      names.forEach(n => add(`film ${n}`, page));
+    }
+    const rest = html.replace(/<video\b[\s\S]*?<\/video>/g, '');
+    for (const m of rest.matchAll(/(?:img\/hero|video)\/([\w-]+)\.(?:jpg|mp4|webm)/g)) add(`film ${m[1]}`, page);
+    for (const m of rest.matchAll(/img\/(?:benefits|why)\/[\w.-]+\.(?:jpg|png|webp)/g)) add(m[0], page);
+  }
+  const twice = [...uses].filter(([, at]) => at.length > 1);
+  if (twice.length) throw new Error('Media used more than once (each film and image must be unique):\n' + twice.map(([k, at]) => `  ${k}: ${at.join(', ')}`).join('\n'));
+  const missing = [];
+  for (const key of uses.keys()) {
+    const files = key.startsWith('film ') ? ['mp4', 'webm'].map(x => `video/${key.slice(5)}.${x}`).concat(`img/hero/${key.slice(5)}.jpg`) : [key];
+    for (const f of files) if (!(await exists(f))) missing.push(f);
+  }
+  if (missing.length) throw new Error('Media files missing:\n  ' + missing.join('\n  '));
+}
+
 async function main() {
   const site = await readJSON('data/site.json');
   const tax = await readJSON('data/taxonomy.json');
@@ -57,6 +83,7 @@ async function main() {
     contactPage(ctx)
   ];
 
+  await checkMedia(pages);
   for (const page of pages) {
     await fs.writeFile(path.join(root, page.path), layout(ctx, page));
   }

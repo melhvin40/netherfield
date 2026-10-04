@@ -30,68 +30,27 @@
 .ph-cinema .ph-title{color:var(--paper); max-width:16ch}
 .ph-cinema .ph-title em{color:var(--gold-300)}
 .ph-cinema .ph-lede{color:rgba(247,243,234,.86)}
+.ph-cinema .ph-inner{display:flex; align-items:flex-end; justify-content:space-between; gap:clamp(24px, 4vw, 72px)}
+.ph-text{min-width:0}
 
-.ph-split{padding-block:clamp(48px, 7vw, 96px) clamp(56px, 8vw, 110px)}
-.ph-split-grid{display:grid; grid-template-columns:minmax(0, 5fr) minmax(0, 7fr); gap:clamp(32px, 5vw, 88px); align-items:center}
-.ph-media-framed{aspect-ratio:16/9; border-radius:var(--r1); box-shadow:var(--sh-2)}
-.ph-media-framed::after{content:""; position:absolute; inset:12px; border:1px solid rgba(247,243,234,.45); pointer-events:none}
-
-.ph-scope .ph-media-scope{aspect-ratio:2.39/1; max-height:62svh; width:100%}
-.ph-scope-text{display:grid; grid-template-columns:minmax(0, 7fr) minmax(0, 5fr); gap:clamp(24px, 4vw, 72px); align-items:end; padding-block:clamp(40px, 5vw, 72px) clamp(24px, 3vw, 40px)}
-.ph-scope-text .eyebrow{grid-column:1 / -1; margin-bottom:-.4rem}
-.ph-scope-text .ph-lede{margin-top:0; padding-bottom:.4rem}
-.ph-scope-text .hh-ctas{grid-column:1 / -1; margin-top:0}
+/* a client's words set into the hero (Testimonials) */
+.ph-quote{position:relative; flex:0 0 auto; width:min(400px, 36vw); margin:0; padding:1.7rem 1.8rem 1.5rem; background:rgba(11,21,48,.58); -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px); border:1px solid rgba(247,243,234,.16); border-radius:var(--r1); color:var(--paper)}
+.ph-quote .i{width:28px; height:28px; color:var(--gold-300)}
+.ph-quote blockquote{margin:.9rem 0 0; font:italic 330 clamp(1.08rem, 1.4vw, 1.28rem)/1.5 var(--serif); color:var(--paper)}
+.ph-quote figcaption{display:flex; flex-direction:column; gap:.2rem; margin-top:1.2rem; padding-top:1rem; border-top:1px solid rgba(247,243,234,.16)}
+.ph-quote-name{font-weight:600; font-size:.92rem}
+.ph-quote-meta{font-size:.8rem; color:rgba(247,243,234,.66)}
+.ph-quote-flag{position:absolute; top:1rem; right:1rem; padding:.3rem .55rem; border:1px solid rgba(247,243,234,.3); border-radius:var(--r1); font:600 .56rem/1 var(--sans); letter-spacing:.2em; text-transform:uppercase; color:rgba(247,243,234,.75)}
+@media (max-width:900px){
+  .ph-cinema .ph-inner{flex-direction:column; align-items:flex-start}
+  .ph-quote{width:100%; max-width:520px}
+}
 
 .ph-minimal{padding-block:clamp(40px, 6vw, 72px) clamp(16px, 2vw, 24px)}
 .ph-minimal .ph-title{font-size:clamp(2.2rem, 4.2vw, 3.6rem)}
 
-@media (max-width:900px){
-  .ph-split-grid,.ph-scope-text{grid-template-columns:1fr}
-  .ph-scope .ph-media-scope{aspect-ratio:16/9}
-}
 
-/* markets map ------------------------------------------------------------- */
-.mk-grid{display:grid; grid-template-columns:minmax(0, 5fr) minmax(0, 7fr); gap:clamp(40px, 6vw, 110px); align-items:center}
-.mk-text .lede{margin-top:1.4rem}
-.mk-tabs{margin-top:2.6rem; border-top:1px solid var(--line)}
-.mk-tab{display:flex; align-items:center; gap:1.2rem; width:100%; padding:1.15rem 0; border:0; border-bottom:1px solid var(--line); background:none; text-align:left; color:var(--ink-2); transition:color .25s}
-.mk-num{font:500 .7rem/1 var(--sans); letter-spacing:.2em; color:var(--ink-3)}
-.mk-name{flex:1; font:340 1.5rem/1.2 var(--serif); color:inherit}
-.mk-tab .i{width:18px; height:18px; opacity:0; transform:translateX(-6px); transition:opacity .25s, transform .25s var(--ease)}
-.mk-tab:hover,.mk-tab[aria-selected="true"]{color:var(--navy-950)}
-.mk-tab[aria-selected="true"] .mk-name{font-style:italic; color:var(--gold-ink)}
-.mk-tab[aria-selected="true"] .i,.mk-tab:hover .i{opacity:1; transform:none}
-.mk-panel{padding-top:1.6rem}
-.mk-summary{color:var(--ink-2); max-width:48ch}
-.mk-facts{display:grid; grid-template-columns:repeat(4, auto); justify-content:start; gap:1.4rem 2rem; margin:1.6rem 0 1.8rem}
-.mk-facts > div{display:flex; flex-direction:column; justify-content:space-between}
-.mk-facts dt{font:600 .62rem/1.3 var(--sans); letter-spacing:.2em; text-transform:uppercase; color:var(--ink-3); white-space:nowrap}
-.mk-facts dd{margin-top:.35rem; font:380 1.25rem/1.2 var(--serif); color:var(--navy-950); white-space:nowrap}
-.mk-note{margin-top:1.8rem; font-size:.78rem; color:var(--ink-3)}
-.mk-map{position:relative; border-radius:var(--r1); overflow:hidden; box-shadow:var(--sh-2); background:var(--navy-950)}
-
-.rm{width:100%; height:auto}
-.rm-sea{fill:#0B1530}
-.rm-graticule line{stroke:rgba(227,200,126,.07); stroke-width:1}
-.rm-land{fill:#13214A}
-.rm-coast{fill:none; stroke:var(--gold); stroke-width:1.6; opacity:.75}
-.rm-tram{fill:none; stroke:rgba(227,200,126,.5); stroke-width:1.3; stroke-dasharray:2 7; stroke-linecap:round}
-.rm-tramlabel,.rm-landmark text,.rm-water{font:500 15px var(--sans); letter-spacing:.16em; text-transform:uppercase; fill:rgba(247,243,234,.42); paint-order:stroke; stroke:#13214A; stroke-width:6px; stroke-linejoin:round}
-.rm-water{font:italic 340 26px var(--serif); letter-spacing:.02em; text-transform:none; fill:rgba(227,200,126,.4); stroke:#0B1530}
-.rm-landmark path{fill:none; stroke:rgba(247,243,234,.55); stroke-width:1.2}
-.rm-landmark circle{fill:rgba(247,243,234,.6)}
-.rm-airport path{stroke:rgba(227,200,126,.6)}
-.rm-prop{fill:var(--gold-300); opacity:.55}
-.rm-prop.is-sold{fill:rgba(247,243,234,.45)}
-.rm-market{cursor:pointer}
-.rm-halo{fill:var(--gold); opacity:0; transition:opacity .35s var(--ease)}
-.rm-dot{fill:var(--paper); stroke:var(--gold); stroke-width:2.5; transition:fill .3s}
-.rm-label{font:600 17px var(--sans); letter-spacing:.18em; text-transform:uppercase; fill:rgba(247,243,234,.75); transition:fill .3s; paint-order:stroke; stroke:#13214A; stroke-width:7px; stroke-linejoin:round}
-.rm-market.is-active .rm-halo{opacity:.18}
-.rm-market.is-active .rm-dot{fill:var(--gold)}
-.rm-market.is-active .rm-label{fill:var(--paper)}
-
-/* planner ------------------------------------------------------------------- */
+/* residency planner (kept for a later phase; not on the page yet) ------------ */
 .pl{background:var(--paper-2)}
 .pl-head{max-width:720px}
 .pl-head .lede{margin-top:1.2rem}
@@ -110,15 +69,9 @@
 .pl-cta{grid-column:1 / -1; border-radius:0; min-height:58px}
 .pl-fine{grid-column:1 / -1; background:var(--paper); padding:.9rem 1.4rem; font-size:.78rem; color:var(--ink-3)}
 
-/* intro --------------------------------------------------------------------- */
-.intro-grid{display:grid; grid-template-columns:minmax(0, 7fr) minmax(0, 5fr); gap:clamp(36px, 6vw, 110px); align-items:center}
-.intro-film{position:relative; aspect-ratio:16/9; overflow:hidden; border-radius:var(--r1); background:var(--navy-950)}
-.intro-film video{width:100%; height:100%; object-fit:cover}
-.intro-text p:not(.eyebrow){margin-top:1.4rem; color:var(--ink-2); max-width:46ch}
-.intro-text .link-arrow{margin-top:2.2rem}
-
 /* estate line: featured listings ------------------------------------------ */
-.es{background:var(--navy-950); color:var(--paper); padding-block:clamp(84px, 10vw, 150px)}
+.es{position:relative; overflow-x:clip; background:var(--navy-950); color:var(--paper); padding-block:clamp(84px, 10vw, 150px)}
+.es > .wrap{position:relative; z-index:1}
 .es-head{max-width:720px; margin-bottom:clamp(48px, 6vw, 84px)}
 .es-head h2{color:var(--paper)}
 .es-head h2 em{color:var(--gold-300)}
@@ -126,23 +79,25 @@
 .es-layout{display:grid; grid-template-columns:minmax(0, 38%) minmax(0, 1fr); gap:clamp(32px, 4vw, 72px); align-items:start}
 .es-graphic{position:sticky; top:calc(var(--hdr-h) + 24px); height:min(78vh, 760px); min-height:480px; overflow:hidden}
 
-/* The cursor-lit grid. Three nested layers, one mask each (no mask-composite needed):
-   x: lines fade in from the left edge and dissolve to nothing well before the right edge,
-   y: same at top and bottom, so no line is ever cut off abruptly,
-   grid: the lines themselves, drawn with gaps at every crossing so no cell is ever a closed box,
-         and revealed only in a soft circle around the cursor. */
-.es-grid-x,.es-grid-y,.es-grid{position:absolute; inset:0; pointer-events:none}
-.es-grid-x{-webkit-mask:linear-gradient(90deg, transparent 0%, #000 14%, #000 46%, transparent 82%); mask:linear-gradient(90deg, transparent 0%, #000 14%, #000 46%, transparent 82%)}
-.es-grid-y{-webkit-mask:linear-gradient(180deg, transparent 0%, #000 12%, #000 88%, transparent 100%); mask:linear-gradient(180deg, transparent 0%, #000 12%, #000 88%, transparent 100%)}
-.es-grid{
-  --x:50%; --y:40%;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Cpath d='M10 .5h36M.5 10v36' stroke='%23E3C87E' stroke-width='1' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-size:56px 56px; background-position:-10px -10px;
-  opacity:0; transition:opacity .45s var(--ease);
+/* The grid: an open field of fine gold lines beside the listings. It runs off the left edge of the
+   screen, stops exactly on the divider line in front of the listings, and dissolves softly at the top
+   and bottom, so no cell is ever a box that ends in mid-air and no line crosses the text above or below.
+   Always faintly there, brighter in a soft circle around the pointer. home.js measures the layout and
+   sets the field's position (--es-top, --es-h) and the divider's x position (--es-divider). */
+.es-field{display:none; position:absolute; left:0; top:var(--es-top, 0); height:var(--es-h, 100%); width:var(--es-divider, 40%); z-index:0; pointer-events:none;
+  -webkit-mask:linear-gradient(180deg, transparent 0, #000 160px, #000 calc(100% - 160px), transparent 100%);
+          mask:linear-gradient(180deg, transparent 0, #000 160px, #000 calc(100% - 160px), transparent 100%)}
+.es.has-field .es-field{display:block}
+.es-field::before,.es-field-lit{content:""; position:absolute; inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Cpath d='M0 55.5h56M55.5 0v56' stroke='%23E3C87E' stroke-width='1'/%3E%3C/svg%3E");
+  background-size:56px 56px; background-position:right top}
+.es-field::before{opacity:.09}
+.es-field::after{content:""; position:absolute; top:0; bottom:0; right:0; width:1px; background:rgba(247,243,234,.2)}
+.es-field-lit{--x:50%; --y:40%; opacity:0; transition:opacity .45s var(--ease);
   -webkit-mask:radial-gradient(circle 300px at var(--x) var(--y), #000 0%, rgba(0,0,0,.45) 45%, transparent 78%);
           mask:radial-gradient(circle 300px at var(--x) var(--y), #000 0%, rgba(0,0,0,.45) 45%, transparent 78%)}
-.es-graphic.is-lit .es-grid{opacity:.3}
-@media (hover:none){ .es-grid{opacity:.12; -webkit-mask:none; mask:none} }
+.es.is-lit .es-field-lit{opacity:.36}
+@media (hover:none){ .es-field-lit{display:none} }
 
 .es-canvas{position:absolute; left:0; right:0; top:0; will-change:transform}
 .es-svg{position:absolute; inset:0; width:100%; height:100%; overflow:visible}
@@ -156,7 +111,7 @@
 .es-node.is-active .es-pointer{width:36px; opacity:1}
 
 .es-cards{display:flex; flex-direction:column; gap:clamp(36px, 5vw, 64px)}
-.es-card{display:block; position:relative; padding-left:1.6rem; border-left:1px solid var(--line-dark); transition:border-color .35s var(--ease)}
+.es-card{display:block; position:relative; padding-left:1.6rem; border-left:1px solid transparent; transition:border-color .35s var(--ease)}
 .es-img{display:block; overflow:hidden; border-radius:var(--r1); background:var(--navy-900)}
 .es-img img{width:100%; height:auto; opacity:.9; transition:opacity .35s var(--ease)}
 .es-body{display:flex; flex-direction:column; gap:.35rem; padding-top:1.3rem}
@@ -186,17 +141,16 @@
 .cta.cta-light p:not(.eyebrow){color:var(--ink-2)}
 
 @media (max-width:1100px){
-  .mk-grid,.pl-grid,.intro-grid{grid-template-columns:1fr}
-  .mk-map{order:-1}
+  .pl-grid{grid-template-columns:1fr}
   .pl-out{grid-template-columns:1fr}
 }
 @media (max-width:860px){
   .es-layout{grid-template-columns:1fr}
-  .es-graphic{display:none}
+  .es-graphic,.es-field{display:none}
+  .es-head{max-width:none}
   .es-card{padding-left:0; border-left:0}
   .hh-facts{grid-template-columns:repeat(2, minmax(0, 1fr))}
-  .mk-facts{grid-template-columns:repeat(2, auto)}
 }
 @media (prefers-reduced-motion:reduce){
-  .es-node img,.es-ring,.es-pointer,.es-card,.es-img img,.es-grid{transition:none}
+  .es-node img,.es-ring,.es-pointer,.es-card,.es-img img,.es-field-lit{transition:none}
 }

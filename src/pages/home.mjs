@@ -1,22 +1,13 @@
-import { esc, icon, formatMoney, monthLabel, distanceKm } from '../lib/util.mjs';
-import { pageUrl, locationLine, primaryPhoto, isSold, LANDMARKS } from '../lib/model.mjs';
-import { rivieraMapSVG } from '../templates/rivieraMap.mjs';
+import { esc, icon, monthLabel } from '../lib/util.mjs';
+import { pageUrl, locationLine, primaryPhoto, isSold } from '../lib/model.mjs';
 import { specsHTML } from '../templates/card.mjs';
-
-const HOME_OPTIONS = [{
-  id: 'home-after', title: 'Home: section after the hero', default: 'markets',
-  variants: [
-    { id: 'markets', label: 'Interactive markets map', note: 'Three markets on one coastline: hover a market for character, distances and live availability.' },
-    { id: 'planner', label: 'Residency planner', note: 'Budget, area and family in; Golden Visa route, rental income and matching homes out.' },
-    { id: 'none', label: 'Leave it out', note: 'The hero flows straight into “Golden Visa, in brief”.' }
-  ]
-}];
+import { FILMS } from '../media.mjs';
 
 function hero() {
   return `<section class="hh">
   <div class="hh-media">
-    <video class="hh-video" muted loop playsinline preload="auto" poster="img/hero-poster.jpg" aria-hidden="true" data-autoplay>
-      <source src="video/hero-loop.mp4" type="video/mp4"><source src="video/hero-loop.webm" type="video/webm">
+    <video class="hh-video" muted loop playsinline preload="auto" poster="img/hero/${FILMS.home}.jpg" aria-hidden="true" data-autoplay>
+      <source src="video/${FILMS.home}.mp4" type="video/mp4"><source src="video/${FILMS.home}.webm" type="video/webm">
     </video>
   </div>
   <div class="hh-shade"></div>
@@ -38,45 +29,11 @@ function hero() {
 </section>`;
 }
 
-function markets(ctx) {
-  const { tax, properties, site } = ctx;
-  const ids = ['kato-glyfada', 'athens-center', 'piraeus'];
-  const ms = ids.map(id => tax.markets.find(m => m.id === id)).filter(Boolean);
-  const airport = LANDMARKS.find(l => l.id === 'airport'), syntagma = LANDMARKS.find(l => l.id === 'syntagma');
-  const panels = ms.map((m, i) => {
-    const avail = properties.filter(p => p.location?.market === m.id && !isSold(p));
-    const from = avail.filter(p => p.price && !p.priceOnRequest).reduce((a, p) => Math.min(a, p.price), Infinity);
-    return `<div class="mk-panel" data-market-panel="${m.id}"${i ? ' hidden' : ''}>
-        <p class="mk-summary">${esc(m.summary)}</p>
-        <dl class="mk-facts">
-          <div><dt>Available now</dt><dd>${avail.length} ${avail.length === 1 ? 'residence' : 'residences'}</dd></div>
-          ${isFinite(from) ? `<div><dt>From</dt><dd data-eur="${from}">${formatMoney(from, 'EUR', site)}</dd></div>` : ''}
-          <div><dt>To Syntagma</dt><dd>${distanceKm(m, syntagma).toFixed(0)} km</dd></div>
-          <div><dt>To the airport</dt><dd>${distanceKm(m, airport).toFixed(0)} km</dd></div>
-        </dl>
-        <a class="link-arrow" href="properties.html?location=${m.id}">View properties in ${esc(m.label)} ${icon('arrow-right', 16)}</a>
-      </div>`;
-  }).join('');
-  return `<section class="sec mk" id="after-hero" data-variant-of="home-after" data-variant="markets">
-  <div class="wrap mk-grid">
-    <div class="mk-text">
-      <p class="eyebrow">Where we build</p>
-      <h2 class="h2">Three markets, <em>one coastline</em></h2>
-      <p class="lede">From the harbour of Piraeus to the beaches of the Athens Riviera, every Netherfield address keeps the sea, the city and the airport within easy reach.</p>
-      <div class="mk-tabs" role="tablist" aria-label="Markets">
-        ${ms.map((m, i) => `<button class="mk-tab" type="button" role="tab" aria-selected="${i === 0}" data-market="${m.id}"><span class="mk-num">0${i + 1}</span><span class="mk-name">${esc(m.label)}</span>${icon('arrow-right', 16)}</button>`).join('')}
-      </div>
-      ${panels}
-      <p class="mk-note">Distances are straight-line from the heart of each area.</p>
-    </div>
-    <div class="mk-map">${rivieraMapSVG({ markets: ms })}</div>
-  </div>
-</section>`;
-}
-
+// Residency planner: budget, area and family in; Golden Visa route, rental income and matching homes out.
+// Kept for a later phase (the calculation is to be reviewed first) and not placed on the page yet.
 function planner(ctx) {
   const { site } = ctx;
-  return `<section class="sec pl" data-variant-of="home-after" data-variant="planner" id="planner">
+  return `<section class="sec pl" id="planner">
   <div class="wrap">
     <div class="pl-head">
       <p class="eyebrow">Plan your residency</p>
@@ -130,24 +87,6 @@ function planner(ctx) {
 </section>`;
 }
 
-function intro() {
-  return `<section class="sec intro">
-  <div class="wrap intro-grid">
-    <figure class="intro-film">
-      <video muted loop playsinline preload="none" poster="img/hero/yacht.jpg" aria-hidden="true" data-autoplay>
-        <source src="video/yacht.mp4" type="video/mp4"><source src="video/yacht.webm" type="video/webm">
-      </video>
-    </figure>
-    <div class="intro-text">
-      <p class="eyebrow">Golden Visa, in brief</p>
-      <h2 class="h2">A property investment that <em>pays you back</em> in residency</h2>
-      <p>Netherfield Developments is a Greece-based real estate agency specialising in Golden Visa properties across Glyfada, Athens and Piraeus, with listings from €250,000 and an average 6% annual rental yield.</p>
-      <a class="link-arrow" href="golden-visa-benefits.html">Explore all Golden Visa benefits ${icon('arrow-right', 16)}</a>
-    </div>
-  </div>
-</section>`;
-}
-
 function estate(ctx) {
   const { properties, tax } = ctx;
   const feat = properties.filter(p => p.featured && !isSold(p)).slice(0, 6);
@@ -168,14 +107,14 @@ function estate(ctx) {
       </a>`;
   }).join('');
   return `<section class="es" id="estateLine">
-  <div class="wrap es-head">
+  <div class="es-field" aria-hidden="true"><div class="es-field-lit"></div></div>
+  <div class="wrap"><div class="es-head">
     <p class="eyebrow on-dark">Featured listings</p>
     <h2 class="h2">Ready to make <em>Greece home?</em></h2>
     <p>${feat.length} residences, each one worth a closer look. Follow the thread.</p>
-  </div>
+  </div></div>
   <div class="wrap es-layout">
     <div class="es-graphic" aria-hidden="true">
-      <div class="es-grid-x"><div class="es-grid-y"><div class="es-grid"></div></div></div>
       <div class="es-canvas"><svg class="es-svg" viewBox="0 0 200 1000" preserveAspectRatio="none"><path class="es-path" d="M100,0 L100,1000"/></svg>${nodes}</div>
     </div>
     <div class="es-cards">${cards}</div>
@@ -187,10 +126,6 @@ function estate(ctx) {
 export function homePage(ctx) {
   const content = [
     hero(),
-    markets(ctx),
-    planner(ctx),
-    `<div data-variant-of="home-after" data-variant="none" hidden></div>`,
-    intro(),
     estate(ctx),
     `<section class="cta cta-light"><div class="wrap cta-in"><p class="eyebrow">Begin</p><h2 class="h2">Quality always <em>comes first</em></h2><p>From property selection and legal support to relocation and rental management: one team, every step.</p><a class="btn btn-gold" href="contact.html">Book a consultation</a></div></section>`
   ].join('\n');
@@ -199,8 +134,7 @@ export function homePage(ctx) {
     path: 'index.html', active: 'home', bodyClass: 'pg-home',
     title: 'Netherfield Developments | Greece Golden Visa Real Estate',
     description: 'Netherfield Developments helps international investors secure Greece Golden Visa residency through premium real estate in Glyfada, Athens and Piraeus.',
-    ogImage: 'img/hero/mykonos.jpg',
-    options: HOME_OPTIONS,
+    ogImage: `img/hero/${FILMS.home}.jpg`,
     scripts: ['home'],
     data: {
       site: { currencies: site.currencies, goldenVisa: site.goldenVisa },

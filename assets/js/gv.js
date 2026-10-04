@@ -1,27 +1,8 @@
-// Golden Visa page: benefits (immersive tabs, gallery panels), step-by-step guide (timeline, story), FAQ (index, pane).
-import { canHover, reducedMotion } from './core.js';
+// Golden Visa page: benefit gallery panels, step-by-step timeline, FAQ reading pane.
+import { canHover } from './core.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
-
-/* benefits: immersive film tabs */
-$$('.gvb-immersive').forEach(box => {
-  const tabs = $$('.gvb-tab', box), films = $$('.gvb-film', box);
-  function select(key) {
-    tabs.forEach(t => t.setAttribute('aria-selected', t.dataset.key === key ? 'true' : 'false'));
-    films.forEach(f => {
-      const on = f.dataset.key === key;
-      f.classList.toggle('is-on', on);
-      if (on && !reducedMotion()) { f.preload = 'auto'; f.muted = true; f.play().catch(() => {}); }
-      else f.pause();
-    });
-  }
-  tabs.forEach(t => {
-    t.addEventListener('click', () => select(t.dataset.key));
-    t.addEventListener('mouseenter', () => { if (canHover()) select(t.dataset.key); });
-    t.addEventListener('focus', () => select(t.dataset.key));
-  });
-});
 
 /* benefits: gallery panels */
 $$('.gvb-panels').forEach(box => {
@@ -50,43 +31,6 @@ $$('.gvs-timeline').forEach(box => {
     });
   });
   select(0);
-});
-
-/* steps: scrolling story */
-$$('.gvs-story').forEach(box => {
-  const items = $$('.gvs-story-item', box), num = $('[data-story-n]', box);
-  if (!('IntersectionObserver' in window)) { items.forEach(i => i.classList.add('is-on')); return; }
-  const io = new IntersectionObserver(entries => entries.forEach(en => {
-    if (!en.isIntersecting) return;
-    items.forEach(i => i.classList.toggle('is-on', i === en.target));
-    if (num) num.textContent = String(Number(en.target.dataset.story) + 1).padStart(2, '0');
-  }), { rootMargin: '-45% 0px -45% 0px' });
-  items.forEach(i => io.observe(i));
-  items[0].classList.add('is-on');
-});
-
-/* FAQ: index (topics + search) */
-$$('.gvf-index').forEach(box => {
-  const qs = $$('.gvf-q', box), cats = $$('[data-faq-cat]', box), search = $('[data-faq-search]', box), empty = $('.gvf-empty', box);
-  let cat = '';
-  function apply() {
-    const words = (search.value || '').toLowerCase().split(/\s+/).filter(Boolean);
-    let shown = 0;
-    qs.forEach(q => {
-      const text = q.textContent.toLowerCase();
-      const ok = (!cat || q.dataset.cat === cat) && words.every(w => text.includes(w));
-      q.hidden = !ok;
-      if (ok) shown++;
-      if (ok && words.length) q.open = true;
-    });
-    empty.hidden = shown > 0;
-  }
-  cats.forEach(b => b.addEventListener('click', () => {
-    cat = b.dataset.faqCat;
-    cats.forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
-    apply();
-  }));
-  search.addEventListener('input', apply);
 });
 
 /* FAQ: reading pane */

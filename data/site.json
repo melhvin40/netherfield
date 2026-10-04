@@ -93,22 +93,23 @@
       {
         "amount": 800000,
         "label": "€800,000",
-        "where": "Attica (incl. Athens, Glyfada and Piraeus), Thessaloniki, Mykonos, Santorini and islands over 3,100 residents",
+        "where": "Attica (all of Athens, including Glyfada and Piraeus), the Thessaloniki regional unit, Mykonos, Santorini and islands with more than 3,100 residents",
         "rule": "One residential property of at least 120 m²"
       },
       {
         "amount": 400000,
         "label": "€400,000",
-        "where": "All other regions of Greece",
+        "where": "All other areas of Greece",
         "rule": "One residential property of at least 120 m²"
       },
       {
         "amount": 250000,
         "label": "€250,000",
         "where": "Anywhere in Greece",
-        "rule": "Conversion of a commercial building to residential use, or restoration of a listed building, completed before the application"
+        "rule": "A building converted from commercial to residential use, with the conversion completed before you apply, or a listed building restored by the first renewal. No minimum size."
       }
-    ]
+    ],
+    "law": "Law 5100/2024 (Article 64), applied since 31 August 2024"
   },
   "repo": {
     "owner": "melhvin40",

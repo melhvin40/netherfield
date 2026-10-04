@@ -10,12 +10,12 @@ follow JamesEdition, with the same filters, categories and features.
 
 | Page | What is on it |
 |---|---|
-| `index.html` | Film hero, interactive markets map (or residency planner), estate line of featured homes |
-| `properties.html` | JamesEdition-style search: free text with suggestions, Price / Property type / Bedrooms, the full Filters panel (status, price, type, rooms, living area, location, View / Outdoor / Indoor / Lot features, house tour, Golden Visa), category strip, 9 sort orders, grid / list / map, currencies, m² or sq ft, saved homes, saved searches |
-| `property-<id>.html` | Gallery with "Show all photos" and a full-screen viewer, key facts, description, features grouped Lot / Interior / Outdoor, property details, YouTube or Vimeo video, 3D tour, floor plans (or "on request"), map / satellite / Street View, distances, agent enquiry form, share, save, similar homes |
-| `golden-visa-benefits.html` | 2024 investment thresholds, benefits, step-by-step guide, FAQ |
-| `why-netherfield.html` | Mission, key figures, founders |
-| `testimonials.html` | Figures, client stories (shown once the agency adds them), delivered homes, the Netherfield promise |
+| `index.html` | Film hero, featured listings on a gold line that runs out to the left edge of the page |
+| `properties.html` | Film of villas and residences, then JamesEdition-style search: free text with suggestions, Price / Property type / Bedrooms, the full Filters panel (status, price, type, rooms, living area, location, View / Outdoor / Indoor / Lot features, house tour, Golden Visa), category strip, 9 sort orders, grid / list / map, currencies, m² or sq ft, saved homes, saved searches |
+| `property-<id>.html` | Gallery with "Show all photos" and a full-screen viewer, key facts, description, features grouped Lot / Interior / Outdoor, property details, YouTube or Vimeo video (or a video tour on request), 3D tour, floor plans (or "on request"), map / satellite / Street View, distances, agent enquiry form, share, save, similar homes |
+| `golden-visa-benefits.html` | Film hero, the programme at a glance and the investment thresholds since 2024, benefits as gallery panels, step-by-step guide as an interactive timeline, FAQ in a reading pane |
+| `why-netherfield.html` | Film hero, mission, key figures, founders |
+| `testimonials.html` | Film hero with a client quote, figures, client stories (sample layout until the agency publishes real ones), delivered homes, the Netherfield promise |
 | `contact.html` | Consultation form (opens a prefilled email; there is no server) |
 | `admin.html` | Netherfield Studio, the agency admin (see below) |
 
@@ -35,11 +35,15 @@ python3 -m http.server      # then open http://localhost:8000
 | `data/site.json` | Contact details, key figures, currency rates, Golden Visa tiers, map settings |
 | `data/faq.json`, `data/testimonials.json` | Golden Visa FAQ; client stories (only stories with `consent: true` are published) |
 | `src/pages/*.mjs`, `src/partials.mjs` | Page templates and the shared shell |
+| `src/media.mjs` | Every film and decorative image, in one place |
 | `src/lib/*.mjs`, `src/templates/*.mjs` | Search engine, formatting and cards, shared by the build and the browser |
 | `src/css/*.css` | Styles, concatenated into `assets/css/site.css` (generated, do not edit) |
-| `assets/js/*.js` | Browser behaviour (search, gallery, maps, options panel, admin) |
+| `assets/js/*.js` | Browser behaviour (search, gallery, maps, Golden Visa panels, admin) |
 | `img/properties/<id>/` | Listing photos (full size and a 960 px card version) |
-| `img/hero/`, `video/` | Film stills and the slow-motion hero films (`tools/make-hero-clips.sh`) |
+| `img/hero/`, `video/` | Hero films and their posters |
+| `img/benefits/`, `img/why/` | Golden Visa benefit panels, Why Netherfield rows |
+| `tools/make-hero-clips.sh` | The aerial films (home reel, Athens) from the original drone reel |
+| `tools/visuals/` | The villa and interior visualisations (Blender scenes) and the films cut from them |
 
 The generated HTML is committed so the folder also works without a build, but the
 GitHub Pages workflow rebuilds everything from `data/` on every push.
@@ -63,32 +67,35 @@ Open `admin.html` (also linked as "Agency login" in the footer).
 - **Publish** saves everything as one commit; the site rebuilds within a minute or two.
   Without a token, *Work offline* exports the changes as a ZIP with instructions.
 
-## Design options
+## Films and imagery
 
-Pages with alternative designs show a small "Design options" tab (in the header on
-tablets and phones). Choices are remembered in the browser and can be shared as links:
+Every film and every decorative image is used exactly once on the whole site; `src/media.mjs` lists
+them and the build stops if one is placed twice or a file is missing. Listing photos are never used
+as decoration.
 
-| Group | Variants (first is the default) |
+| Page | Film |
 |---|---|
-| `home-after` | `markets`, `planner`, `none` |
-| `properties-hero` | `scope`, `cinema`, `split`, `minimal` |
-| `gv-hero`, `why-hero` | `cinema`, `scope`, `split` |
-| `gv-benefits` | `pillars`, `immersive`, `panels` |
-| `gv-steps` | `timeline`, `story`, `grid` |
-| `gv-faq` | `index`, `pane`, `cards` |
-| `why-figures` | `numerals`, `map`, `band` |
-| `stories` | `live`, `preview` |
+| Home | `home`: Mykonos and a sailing yacht, aerial |
+| Properties | `villas`: three residences (Cycladic villa at blue hour, Riviera villa, villa at sunset) |
+| Golden Visa Benefits | `residences`: villa terrace at blue hour, Riviera villa, sea-view living room |
+| Why Netherfield | `athens`: Athens at sunset, aerial |
+| Testimonials | `homes`: pergola dining, dining room, garden |
 
-Example: `golden-visa-benefits.html?opt-gv-faq=cards&opt-gv-steps=story`.
-`?options=off` hides the panel, `?options=on` brings it back.
+The villa and interior films and images are interim visualisations rendered for this concept
+(`tools/visuals`, Blender). To replace a film with licensed footage or the agency's own, drop
+`video/<name>.mp4`, `video/<name>.webm` and a poster `img/hero/<name>.jpg` into place; images keep
+their file names in `img/benefits/` and `img/why/`.
 
 ## Notes
 
 - Figures marked *indicative* (prices, sizes, yields) are sample values until the agency
   confirms them; currency conversions use the indicative rates in `data/site.json`.
-- Golden Visa content follows the 2024 rules: €800,000 in Attica (incl. Athens, Glyfada,
-  Piraeus), Thessaloniki, Mykonos, Santorini and large islands; €400,000 elsewhere;
-  €250,000 for commercial-to-residential conversions or restored listed buildings.
+- Golden Visa content follows Law 5100/2024 (Article 64, amending Article 100 of the Migration
+  Code, Law 5038/2023), applied since 31 August 2024: €800,000 in Attica (incl. Athens, Glyfada,
+  Piraeus), the Thessaloniki regional unit, Mykonos, Santorini and islands with more than 3,100
+  residents; €400,000 elsewhere; both for a single home of at least 120 m². €250,000 anywhere for a
+  commercial-to-residential conversion (completed before applying) or a listed building restored by
+  the first renewal. Short-term (holiday) letting is not allowed.
 - Street View opens inside the page when a property has a Street View embed link, or for
   every property once a Google Maps Embed API key is set; otherwise a button opens it in Google Maps.
 - The preview is not indexed (`indexable: false`). Turn indexing on in the admin settings

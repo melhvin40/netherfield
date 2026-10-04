@@ -6,9 +6,6 @@ import { pageUrl, typeOf, marketOf, locationLine, groupedFeatures, pricePerSqm, 
 import { cardHTML, priceText } from '../templates/card.mjs';
 import { locatorSVG } from '../templates/rivieraMap.mjs';
 
-const AREA_FILM = { 'kato-glyfada': 'beach', 'voula': 'beach', 'athens-center': 'athens', 'athens': 'athens', 'piraeus': 'bay' };
-const FILM_TITLE = { beach: 'The Athens Riviera', athens: 'Athens at dusk', bay: 'Aegean waters', yacht: 'Out on the Saronic Gulf' };
-
 function photoImg(ph, p, attrs = '') {
   const srcset = ph.card ? `${esc(ph.card)} ${ph.cw}w, ${esc(ph.src)} ${ph.w}w` : `${esc(ph.src)} ${ph.w}w`;
   return `<img src="${esc(ph.src)}" srcset="${srcset}" sizes="(min-width:1100px) 760px, 100vw" width="${ph.w}" height="${ph.h}" alt="${esc(ph.alt || p.title)}" decoding="async"${attrs}>`;
@@ -110,12 +107,11 @@ function videoSection(p) {
   } else if (vm) {
     body = `<div class="pd-video pd-video-vimeo" data-embed="https://player.vimeo.com/video/${vm}?autoplay=1"><button class="pd-play" type="button" aria-label="Play video">${icon('play', 64)}</button></div>`;
   } else {
-    const film = AREA_FILM[p.location?.market] || 'yacht';
-    body = `<figure class="pd-film">
-      <video muted loop playsinline preload="none" poster="img/hero/${film}.jpg" data-autoplay aria-label="${esc(FILM_TITLE[film])}, area film">
-        <source src="video/${film}.mp4" type="video/mp4"><source src="video/${film}.webm" type="video/webm"></video>
-      <figcaption><span>Area film &middot; ${esc(FILM_TITLE[film])}</span><a class="link-arrow on-dark" href="#enquire" data-request="video">Request the property video tour ${icon('arrow-right', 16)}</a></figcaption>
-    </figure>`;
+    body = `<div class="pd-request">
+        <span class="pd-request-art pd-request-play" aria-hidden="true">${icon('play', 44)}</span>
+        <div><p class="pd-request-h">Video tour on request</p><p>A filmed walkthrough of the home and its surroundings, or a live video call from the property with one of our advisors.</p>
+        <a class="btn btn-line" href="#enquire" data-request="video">Request a video tour</a></div>
+      </div>`;
   }
   return `<section class="pd-sec" id="video" aria-labelledby="hVideo"><h2 class="pd-h" id="hVideo">Video</h2>${body}</section>`;
 }

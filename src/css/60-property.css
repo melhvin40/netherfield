@@ -38,6 +38,12 @@
 .pd-tile-map{justify-content:flex-end; padding-bottom:12%}
 /* solid ink under the label so no map line ever runs through the text */
 .pd-tile-map::after{content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(180deg, rgba(11,21,48,0) 42%, rgba(11,21,48,.92) 64%, #0B1530 78%)}
+.rm{width:100%; height:auto}
+.rm-sea{fill:#0B1530}
+.rm-land{fill:#13214A}
+.rm-coast{fill:none; stroke:var(--gold); stroke-width:1.6; opacity:.75}
+.rm-tram{fill:none; stroke:rgba(227,200,126,.5); stroke-width:1.3; stroke-dasharray:2 7; stroke-linecap:round}
+.rm-dot{fill:var(--paper); stroke:var(--gold); stroke-width:2.5}
 .rm-area{fill:rgba(199,162,83,.22); stroke:var(--gold); stroke-width:1.2}
 .pd-tile-street{background:var(--navy-850)}
 .pd-tile-street:hover{background:var(--navy-800)}
@@ -99,11 +105,9 @@
 .pd-play:hover{transform:scale(1.06)}
 .pd-play .i{width:64px; height:64px}
 .pd-tour .btn{position:relative; z-index:1}
-.pd-film{position:relative; aspect-ratio:16/9; overflow:hidden; border-radius:var(--r1); background:var(--navy-950)}
-.pd-film video{width:100%; height:100%; object-fit:cover}
-.pd-film figcaption{position:absolute; left:0; right:0; bottom:0; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:1rem; padding:clamp(1rem, 2.4vw, 1.6rem); background:linear-gradient(180deg, transparent, rgba(11,21,48,.85)); color:var(--paper); font-size:.88rem}
 .pd-request{position:relative; display:grid; grid-template-columns:150px minmax(0, 1fr); gap:clamp(20px, 3vw, 36px); align-items:center; padding:clamp(1.4rem, 3vw, 2.2rem); background:var(--paper-2); border:1px solid var(--line); border-radius:var(--r1); overflow:hidden; isolation:isolate}
 .pd-request-art{position:relative; inset:auto; z-index:0; opacity:.9; aspect-ratio:4/3; background-size:contain}
+.pd-request-play{display:grid; place-items:center; background:none; border:1px solid rgba(130,100,40,.45); border-radius:var(--r1); color:var(--gold-ink)}
 .pd-request-h{font:360 1.4rem/1.2 var(--serif); color:var(--navy-950)}
 .pd-request p:not(.pd-request-h){margin-top:.5rem; color:var(--ink-2); font-size:.95rem; max-width:52ch}
 .pd-request .btn{margin-top:1.2rem}

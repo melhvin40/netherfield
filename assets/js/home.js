@@ -1,4 +1,4 @@
-// Home: featured-listings "estate line", markets map, residency planner.
+// Home: featured-listings "estate line" and its grid; the residency planner (not on the page yet).
 import { pageData, canHover, reducedMotion } from './core.js';
 import { formatMoney } from '../../src/lib/util.mjs';
 
@@ -18,13 +18,23 @@ if (es) {
   const canvas = es.querySelector('.es-canvas');
   const svg = es.querySelector('.es-svg');
   const path = es.querySelector('.es-path');
-  const grid = es.querySelector('.es-grid');
+  const field = es.querySelector('.es-field');
+  const fieldLit = es.querySelector('.es-field-lit');
   const cardsEl = es.querySelector('.es-cards');
+  const layoutEl = es.querySelector('.es-layout');
   const nodes = [...es.querySelectorAll('.es-node')];
   const cards = [...es.querySelectorAll('.es-card')];
 
   function layout() {
     if (!graphic || getComputedStyle(graphic).display === 'none') return;
+    // the grid field spans the listings' height and ends exactly on the divider line beside them
+    if (field) {
+      const sec = es.getBoundingClientRect(), lay = layoutEl.getBoundingClientRect();
+      es.style.setProperty('--es-top', Math.round(lay.top - sec.top) + 'px');
+      es.style.setProperty('--es-h', Math.round(lay.height) + 'px');
+      es.style.setProperty('--es-divider', Math.round(cardsEl.getBoundingClientRect().left - sec.left) + 1 + 'px');
+      es.classList.add('has-field');
+    }
     const H = cardsEl.offsetHeight;
     if (!H) return;
     canvas.style.height = H + 'px';
@@ -75,14 +85,14 @@ if (es) {
     const hit = document.elementFromPoint(e.clientX, e.clientY);
     const item = hit && hit.closest && hit.closest('#estateLine .es-card, #estateLine .es-node');
     setActive(item ? Number(item.dataset.index) : null);
-    if (graphic && grid) {
-      const r = graphic.getBoundingClientRect();
+    if (field && fieldLit) {
+      const r = field.getBoundingClientRect();
       const inside = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
-      graphic.classList.toggle('is-lit', inside && canHover() && !reducedMotion());
-      if (inside) { grid.style.setProperty('--x', (e.clientX - r.left) + 'px'); grid.style.setProperty('--y', (e.clientY - r.top) + 'px'); }
+      es.classList.toggle('is-lit', inside && canHover() && !reducedMotion());
+      if (inside) { fieldLit.style.setProperty('--x', (e.clientX - r.left) + 'px'); fieldLit.style.setProperty('--y', (e.clientY - r.top) + 'px'); }
     }
   }, { passive: true });
-  document.documentElement.addEventListener('pointerleave', () => { setActive(null); if (graphic) graphic.classList.remove('is-lit'); });
+  document.documentElement.addEventListener('pointerleave', () => { setActive(null); es.classList.remove('is-lit'); });
   window.addEventListener('blur', () => setActive(null));
 
   // keyboard users get the same highlight while a card has visible focus
@@ -100,44 +110,7 @@ if (es) {
 }
 
 /* ---------------------------------------------------------------------------
-   Markets map: tabs and map markers select a market
-   --------------------------------------------------------------------------- */
-const mk = document.querySelector('.mk');
-if (mk) {
-  const tabs = [...mk.querySelectorAll('.mk-tab')];
-  const panels = [...mk.querySelectorAll('[data-market-panel]')];
-  const markers = [...mk.querySelectorAll('.rm-market')];
-  const dots = [...mk.querySelectorAll('.rm-prop')];
-  function select(id, focus) {
-    tabs.forEach(t => {
-      const on = t.dataset.market === id;
-      t.setAttribute('aria-selected', on ? 'true' : 'false');
-      t.tabIndex = on ? 0 : -1;
-      if (on && focus) t.focus();
-    });
-    panels.forEach(p => { p.hidden = p.dataset.marketPanel !== id; });
-    markers.forEach(m => m.classList.toggle('is-active', m.dataset.market === id));
-    dots.forEach(d => { d.style.opacity = d.dataset.market === id ? '1' : ''; });
-  }
-  tabs.forEach((t, i) => {
-    t.addEventListener('click', () => select(t.dataset.market));
-    t.addEventListener('mouseenter', () => { if (canHover()) select(t.dataset.market); });
-    t.addEventListener('keydown', e => {
-      if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp' && e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
-      e.preventDefault();
-      const n = tabs[(i + (e.key === 'ArrowDown' || e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
-      select(n.dataset.market, true);
-    });
-  });
-  markers.forEach(m => {
-    m.addEventListener('click', () => select(m.dataset.market));
-    m.addEventListener('mouseenter', () => { if (canHover()) select(m.dataset.market); });
-  });
-  if (tabs[0]) select(tabs[0].dataset.market);
-}
-
-/* ---------------------------------------------------------------------------
-   Residency planner
+   Residency planner (kept for a later phase; runs only when the section is on the page)
    --------------------------------------------------------------------------- */
 const pl = document.getElementById('planner');
 if (pl) {

@@ -43,7 +43,7 @@
     {
       "cat": "investment",
       "q": "What is the minimum investment?",
-      "a": "Since 2024 it depends on the location: €800,000 in Attica (including Athens, Glyfada and Piraeus), Thessaloniki, Mykonos, Santorini and islands with more than 3,100 residents, and €400,000 everywhere else, in both cases for one residential property of at least 120 m². A €250,000 threshold applies anywhere in Greece to buildings converted from commercial to residential use and to restored listed buildings. Our advisors confirm which route applies to each Netherfield property before you reserve."
+      "a": "Since 2024 it depends on the location: €800,000 in Attica (all of Athens, including Glyfada and Piraeus), the Thessaloniki regional unit, Mykonos, Santorini and islands with more than 3,100 residents, and €400,000 everywhere else, in both cases for one residential property of at least 120 m². A €250,000 threshold applies anywhere in Greece to a building converted from commercial to residential use (the conversion must be completed before you apply) and to a listed building that is restored (by the first renewal). Our advisors confirm which route applies to each Netherfield property before you reserve."
     },
     {
       "cat": "investment",
@@ -53,7 +53,7 @@
     {
       "cat": "investment",
       "q": "Can I rent the property out?",
-      "a": "Yes, on long-term leases. Golden Visa properties may not be used for short-term holiday rentals such as Airbnb. Netherfield's rental team can find and manage long-term tenants for you."
+      "a": "Yes, on long-term leases. Golden Visa properties may not be used for short-term holiday rentals such as Airbnb; breaking this rule can cost the permit and a €50,000 fine. Netherfield's rental team can find and manage long-term tenants for you."
     },
     {
       "cat": "investment",
@@ -63,7 +63,7 @@
     {
       "cat": "family",
       "q": "Who can be included in the application?",
-      "a": "Your spouse or registered partner, your children under 21, and the parents of both spouses, all under the one investment."
+      "a": "Your spouse or registered partner, your unmarried children under 21, and the parents of both spouses, all under the one investment."
     },
     {
       "cat": "family",

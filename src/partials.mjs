@@ -1,6 +1,7 @@
-// Page shell: <head>, header, mobile drawer, footer, icon sprite and the design-options plumbing.
+// Page shell: <head>, header, mobile drawer, footer, icon sprite, and the full-bleed film hero.
 import { esc, icon } from './lib/util.mjs';
 import { sprite } from './templates/icons.mjs';
+import { FILMS } from './media.mjs';
 
 export const NAV = [
   { id: 'home', href: 'index.html', label: 'Home' },
@@ -10,19 +11,8 @@ export const NAV = [
   { id: 'testimonials', href: 'testimonials.html', label: 'Testimonials' }
 ];
 
-// Runs in <head> before first paint: applies design-option choices (from ?opt-<group>=<variant>
-// or a previous visit) so a non-default variant never flashes the default first.
-const OPTIONS_BOOT = `(function(){var d=document.documentElement;d.className+=' js';try{var q=new URLSearchParams(location.search),s=JSON.parse(localStorage.getItem('nf-options')||'{}');q.forEach(function(v,k){if(k.indexOf('opt-')===0)s[k.slice(4)]=v});if(q.has('options'))localStorage.setItem('nf-options-panel',q.get('options'));localStorage.setItem('nf-options',JSON.stringify(s));for(var k in s)d.setAttribute('data-opt-'+k,s[k])}catch(e){}})();`;
-
-// Hide every variant except the chosen one (or the default when nothing is chosen).
-export function optionsCSS(groups) {
-  if (!groups || !groups.length) return '';
-  return groups.map(g => {
-    const rules = [`html:not([data-opt-${g.id}]) [data-variant-of="${g.id}"]:not([data-variant="${g.default}"])`];
-    g.variants.forEach(v => rules.push(`html[data-opt-${g.id}="${v.id}"] [data-variant-of="${g.id}"]:not([data-variant="${v.id}"])`));
-    return rules.join(',\n') + '{display:none!important}';
-  }).join('\n');
-}
+// Runs in <head> before first paint: marks that scripts run (reveal-on-scroll styles depend on it).
+const JS_BOOT = `document.documentElement.className+=' js';`;
 
 export function jsonScript(id, data) {
   return `<script type="application/json" id="${id}">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>`;
@@ -32,7 +22,7 @@ function head(ctx, page) {
   const { site, v } = ctx;
   const base = site.indexable ? site.siteUrl.replace(/\/$/, '') + '/' : site.previewUrl;
   const url = base + (page.path === 'index.html' ? '' : page.path);
-  const ogImage = page.ogImage ? base + page.ogImage : base + 'img/hero/mykonos.jpg';
+  const ogImage = base + (page.ogImage || `img/hero/${FILMS.home}.jpg`);
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -56,8 +46,7 @@ ${site.indexable ? `<link rel="canonical" href="${esc(url)}">` : ''}
 <link rel="preload" href="assets/fonts/albert-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css?v=${v}">
 ${page.leaflet ? `<link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">` : ''}
-<script>${OPTIONS_BOOT}</script>
-${page.options && page.options.length ? `<style id="nf-options-css">${optionsCSS(page.options)}</style>` : ''}
+<script>${JS_BOOT}</script>
 ${(page.jsonld || []).map(j => `<script type="application/ld+json">${JSON.stringify(j)}</script>`).join('\n')}
 </head>`;
 }
@@ -134,7 +123,6 @@ ${page.content}
 </main>
 ${footer(site, ctx.tax)}
 ${page.data ? jsonScript('nf-data', page.data) : ''}
-${page.options && page.options.length ? jsonScript('nf-options-data', page.options) : ''}
 ${page.leaflet ? `<script src="assets/vendor/leaflet/leaflet.js" defer></script>` : ''}
 <script type="module" src="assets/js/site.js?v=${v}"></script>
 ${(page.scripts || []).map(s => `<script type="module" src="assets/js/${s}.js?v=${v}"></script>`).join('\n')}
@@ -143,40 +131,25 @@ ${(page.scripts || []).map(s => `<script type="module" src="assets/js/${s}.js?v=
 `;
 }
 
-// A hero in the chosen variant. Variants share one markup family:
-//  cinema   full-bleed slow-motion loop, headline over a soft gradient
-//  split    editorial: headline on paper, the film in a framed panel beside it
-//  scope    cinemascope band, headline set below on paper (text never over the image)
-//  minimal  no imagery: compact, type-led header (JamesEdition-style for the listing)
-export function heroVariants(group, cfg) {
-  const media = (cls = '') => `<div class="ph-media${cls}">
+// Full-bleed film hero: a slow-motion loop behind the title, which rests on a soft gradient.
+// cfg: clip (video/<clip>.mp4|webm and img/hero/<clip>.jpg), eyebrow, title (HTML), lede, actions (HTML),
+// extra (HTML placed after the text, e.g. a quote), cls (extra classes on the section).
+export function filmHero(cfg) {
+  return `<section class="ph ph-cinema${cfg.cls ? ' ' + cfg.cls : ''}">
+    <div class="ph-media">
       <video class="ph-video" muted loop playsinline preload="none" poster="img/hero/${cfg.clip}.jpg" aria-hidden="true" data-autoplay>
         <source src="video/${cfg.clip}.mp4" type="video/mp4"><source src="video/${cfg.clip}.webm" type="video/webm">
       </video>
-    </div>`;
-  const text = (dark) => `<p class="eyebrow${dark ? ' on-dark' : ''}">${esc(cfg.eyebrow)}</p>
-      <h1 class="ph-title">${cfg.title}</h1>
-      ${cfg.lede ? `<p class="ph-lede">${esc(cfg.lede)}</p>` : ''}
-      ${cfg.actions || ''}`;
-  const v = cfg.variants || ['cinema', 'split', 'scope'];
-  const out = [];
-  if (v.includes('cinema')) out.push(`<section class="ph ph-cinema" data-variant-of="${group}" data-variant="cinema">
-    ${media()}
-    <div class="ph-shade"></div>
-    <div class="wrap ph-inner">${text(true)}</div>
-  </section>`);
-  if (v.includes('split')) out.push(`<section class="ph ph-split" data-variant-of="${group}" data-variant="split">
-    <div class="wrap ph-split-grid">
-      <div class="ph-split-text">${text(false)}</div>
-      ${media(' ph-media-framed')}
     </div>
-  </section>`);
-  if (v.includes('scope')) out.push(`<section class="ph ph-scope" data-variant-of="${group}" data-variant="scope">
-    ${media(' ph-media-scope')}
-    <div class="wrap ph-scope-text">${text(false)}</div>
-  </section>`);
-  if (v.includes('minimal')) out.push(`<section class="ph ph-minimal" data-variant-of="${group}" data-variant="minimal">
-    <div class="wrap">${text(false)}</div>
-  </section>`);
-  return out.join('\n');
+    <div class="ph-shade"></div>
+    <div class="wrap ph-inner">
+      <div class="ph-text">
+        <p class="eyebrow on-dark">${esc(cfg.eyebrow)}</p>
+        <h1 class="ph-title">${cfg.title}</h1>
+        ${cfg.lede ? `<p class="ph-lede">${esc(cfg.lede)}</p>` : ''}
+        ${cfg.actions || ''}
+      </div>
+      ${cfg.extra || ''}
+    </div>
+  </section>`;
 }
