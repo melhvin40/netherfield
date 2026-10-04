@@ -41,7 +41,7 @@ python3 -m http.server      # then open http://localhost:8000
 | `assets/js/*.js` | Browser behaviour (search, gallery, maps, Golden Visa panels, admin) |
 | `img/properties/<id>/` | Listing photos (full size and a 960 px card version) |
 | `img/hero/`, `video/` | Hero films and their posters |
-| `img/benefits/`, `img/why/` | Golden Visa benefit panels, Why Netherfield rows |
+| `img/benefits/` | Golden Visa benefit panels |
 | `tools/make-hero-clips.sh` | The aerial films (home reel, Athens) from the original drone reel |
 | `tools/visuals/` | The villa and interior visualisations (Blender scenes) and the films cut from them |
 
@@ -84,7 +84,7 @@ as decoration.
 The villa and interior films and images are interim visualisations rendered for this concept
 (`tools/visuals`, Blender). To replace a film with licensed footage or the agency's own, drop
 `video/<name>.mp4`, `video/<name>.webm` and a poster `img/hero/<name>.jpg` into place; images keep
-their file names in `img/benefits/` and `img/why/`.
+their file names in `img/benefits/`.
 
 ## Notes
 

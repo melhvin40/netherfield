@@ -25,6 +25,3 @@ run interiors bedroom morning 48 interior-bedroom-morning
 run villa_b detail sunset 64 villa-b-detail-sunset
 run villa_a pool sunset 64 villa-a-pool-sunset
 run interiors study golden 48 interior-study-golden
-# Why Netherfield rows
-run interiors lounge blue 48 interior-lounge-blue
-run villa_a terrace blue 64 villa-a-terrace-blue

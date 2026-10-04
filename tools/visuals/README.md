@@ -1,7 +1,6 @@
 # Villa and interior visualisations
 
-The films on Properties, Golden Visa Benefits and Testimonials, the Golden Visa benefit panels and the
-Why Netherfield row images are computer-generated visualisations made for this concept. They stand in
+The films on Properties, Golden Visa Benefits and Testimonials, and the Golden Visa benefit panels are computer-generated visualisations made for this concept. They stand in
 until licensed footage or the agency's own photography replaces them (same file names, see the main README).
 
 | File | What it is |

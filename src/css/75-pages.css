@@ -6,6 +6,9 @@
 .wr + .wr{margin-top:clamp(72px, 9vw, 140px)}
 .wr-rev{grid-template-columns:minmax(0, 7fr) minmax(0, 5fr)}
 .wr-rev .wr-text{order:2}
+.wr-solo,.wr-solo.wr-rev{grid-template-columns:minmax(0, 1fr); max-width:820px}
+.wr-solo.wr-rev{margin-left:auto}
+.wr-solo.wr-rev .wr-text{order:0}
 .wr-text p:not(.eyebrow){margin-top:1.4rem; color:var(--ink-2); max-width:52ch}
 .wr-media{border-radius:var(--r1); overflow:hidden; background:var(--paper-3)}
 .wr-media img{width:100%; height:auto; aspect-ratio:16/9; object-fit:cover}

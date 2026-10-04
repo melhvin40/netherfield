@@ -1,7 +1,7 @@
 // Why Netherfield: hero, mission, why choose us, key figures, founders & partners.
 import { esc } from '../lib/util.mjs';
 import { filmHero } from '../partials.mjs';
-import { FILMS, WHY_IMAGES } from '../media.mjs';
+import { FILMS } from '../media.mjs';
 
 const FOUNDERS = [
   { img: 'img/founder-mostafa.jpg', name: 'Mostafa El Shibini', role: 'Managing Partner', bio: 'With over 30 years of experience in legal, financial and real estate consulting, Mostafa brings industry knowledge and strategic insight to every project. As the leader of Netherfield Developments, he focuses on delivering high-end real estate solutions with a specialty in Golden Visa investments in Greece and England. Also a Managing Partner at Redcon for Real Estate and the Egyptian International Consulting Group, his cross-border expertise connects investors from the Middle East with high-potential opportunities in Europe.' },
@@ -37,18 +37,15 @@ function founders() {
 
 export function whyPage(ctx) {
   const { site } = ctx;
-  const media = im => `<figure class="wr-media"><img src="${im.src}" width="${im.w}" height="${im.h}" alt="${esc(im.alt)}" loading="lazy" decoding="async"></figure>`;
   const content = [
     filmHero({ clip: FILMS.why, eyebrow: 'Why Netherfield', title: 'Led by experience, <em>built on trust</em>', lede: 'A seasoned team with deep expertise in real estate, construction, finance and design, delivering secure, high-value investments across Greece.' }),
     `<section class="sec why-rows">
   <div class="wrap">
-    <div class="wr" data-reveal>
+    <div class="wr wr-solo" data-reveal>
       <div class="wr-text"><p class="eyebrow">Our mission</p><h2 class="h2">Confidence and clarity, <em>every step</em></h2><p>Our mission is to deliver high-quality properties and exceptional, end-to-end service that ensures every client makes the right investment decision, with confidence and clarity. We guide individuals and families from around the world through every step of the process, from property selection and legal support to relocation and rental management.</p></div>
-      ${media(WHY_IMAGES.mission)}
     </div>
-    <div class="wr wr-rev" data-reveal>
+    <div class="wr wr-solo wr-rev" data-reveal>
       <div class="wr-text"><p class="eyebrow">Why choose us</p><h2 class="h2">Deep market knowledge, <em>tailored guidance</em></h2><p>With a proven track record of successful property sales in London and Greece, we bring deep market knowledge and experience to each client we serve. Our team specialises in supporting Egyptians and expats across the Middle East, with tailored guidance from property selection and legal support to interior design and rental management.</p></div>
-      ${media(WHY_IMAGES.choose)}
     </div>
   </div>
 </section>`,

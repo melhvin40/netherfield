@@ -3,7 +3,6 @@
 
 Each still is graded (gentle S-curve, a touch of colour, vignette), then films are cut as slow push-ins
 and drifts (Ken Burns) that dissolve into one another and close into a seamless loop.
-Output: video/<film>.mp4 + .webm, img/hero/<film>.jpg (poster), img/benefits/*.jpg, img/why/*.jpg.
 
 usage: python3 tools/visuals/make_media.py tools/visuals/out . [film|image ...]
 """
@@ -41,8 +40,6 @@ IMAGES = {
     'villa-b-detail-sunset': ('img/benefits/investment.jpg', 1100, 1100, 0.42),
     'villa-a-pool-sunset': ('img/benefits/lifestyle.jpg', 1100, 1100, 0.5),
     'interior-study-golden': ('img/benefits/education.jpg', 1100, 1100, 0.32),
-    'interior-lounge-blue': ('img/why/mission.jpg', 1600, 900, 0.5),
-    'villa-a-terrace-blue': ('img/why/choose.jpg', 1600, 900, 0.5),
 }
 
 def grade(name):
